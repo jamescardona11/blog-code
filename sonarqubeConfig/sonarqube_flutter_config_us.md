@@ -149,8 +149,3 @@ Consider giving like, share, and see you in an upcoming Flutter article.
 - https://docs.docker.com/engine/reference/commandline/cp/
 - https://stackoverflow.com/questions/29837369/cant-be-indexed-twice-testsourcedirectory-and-sourcedirectory-are-same/40150551#40150551
 - https://github.com/insideapp-oss/sonar-flutter
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg3MDU2MTI3LDU3Nzc1NzQzLC0xNzg1OT
-I2NjkyLC0yMTY3OTE3MSwtNDI1NjkxMDQ0LC0xMjczNTg0ODQw
-LC03ODE2NzYxMyw3MzA5OTgxMTZdfQ==
--->
