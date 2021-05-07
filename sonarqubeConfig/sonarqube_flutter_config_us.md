@@ -1,16 +1,22 @@
-# Flutter and SonarQube good choice to improve our project
+# Flutter continuous code inspection with SonarQube to improve your project
 
 This article will give you a brief introduction to an analysis tool for your code.
-We will try to answer: Why use sonarqube? How to install it?
+We will try to answer these questions: Why use sonarqube?, How to install it?
 
-The English version of this article: 
-The Spanish version of this article:
+- The English version of this article: 
+- The Spanish version of this article:
+
+
+<p align="center" width="100%">
+<img src="https://i.imgur.com/mbHai0A.gif" width="400"/>
+</p>
+
 
 # Introduction
-Sonarqube, like so many similar tools, allows us to perform static code analysis, this will guide us to detect points for improvement.
+Sonarqube, like so many similar tools, allow us to perform static code analysis, this will guide us to detect points for improvement.
 
 ## Why use sonarqube?
-It will help us to identify the things we do well. But mainly the things we do wrong.
+It will help us to identify the things that we are doing good, and mainly the things that we are doing wrong.
 Among the main uses, we can highlight the possibility of identifying aspects such as:
 - duplicate code
 - dead code
@@ -25,12 +31,12 @@ Among the main uses, we can highlight the possibility of identifying aspects suc
 ## What information can sonarqube show us?
 - **Quality Gate**: Rules that the analyzed project must comply with to pass the stage.
 - **Bugs y Vulnerabilidades**: Refers to actual or potential failures.
-- **Code smells**: It is an indication that you can improve the writing of your code. It does not mean that you have any errors, but it could increase the risk of errors.
+- **Code smells**: It is an indication that helps you with the writing of your code. It does not mean that you have any errors, it is just a suggestion to reduce the risk of errors.
 - **Coverage**: It allows us to know how much code has been tested and validated by the tests.
 
 # How to install and use it?
 
-Let's see the steps for you to install it and integrate it into your developer day.
+Let's see the steps to install it and integrate it into your developer day.
 
 ### Prerequisites:
 - [Docker](https://docs.docker.com/get-docker)
@@ -42,54 +48,56 @@ Let's see the steps for you to install it and integrate it into your developer d
 	docker pull sonarqube
 	```
 	
-2. Run the **sonarqube** container,  two ways to do it:
+2. Run the **sonarqube** container, there are two ways to do it:
 
 	- Using the following **command**
 			```docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 	sonarqube:latest```
 			
-		If you downloaded a version other than *latest* change to the specific version.
-		Important to remember the *--name* for later use.
+		If you download another version instead of *latest* change to the specific version.
+		Important: remember the *--name* for later use.
 
 
-	- The second way to do it is through **docker** as shown in the following image:
-	 Important to remember the *name* for later use
+	- The second way to do it, is using **docker app**, as shown in the following image:
+	 Important: remember the *name* for later use
 	<p align="center" width="100%">
     <img src="https://i.imgur.com/Iygj8gT.png" width="600"/>
 	</p>
 	
 
-3. Enter to ```localhost:9000``` to validate that everything runs fine, you will find a section like the following image, the username and password is **admin**:
+3. Enter to ```localhost:9000``` to validate that everything it's running fine. You will see a section like the following image, the username and password is **admin**:
 	<p align="center" width="100%">
     <img src="https://i.imgur.com/xnAez9L.png" width="600"/>
 	</p>
 
-4. We are going to install a plugin to be able to support the analysis in Flutter, 
-	- Download from section **[releases](https://github.com/insideapp-oss/sonar-flutter)** the latest version of the file **.jar**
-	- We are going to copy the downloaded file through the **terminal** in the docker container.
-	- From the **docker** application we are going to execute the **cli** and then you are going to take the "**id-docker**" from the docker container as shown in the following images.
+4. We are going to install a plugin so we can be able to support the analysis in Flutter, 
+	- Download from section **[releases](https://github.com/insideapp-oss/sonar-flutter)** the last version of the file **.jar**
+	- We are going to copy the downloaded file using the **terminal** and then we are going to paste it in the docker container.
+	- From the **docker** application we are going to execute the **cli** and then take the "**id-docker**" from the docker container as shown in the following images.
 	<p align="center" width="100%">
     <img src="https://i.imgur.com/Bo4SMkd.png" width="600"/>
     <img src="https://i.imgur.com/hN3Ue7w.png" width="600"/>    
 	</p>
 
-	- Then you are going to copy the **.jar** file to the docker container as follows:
+	- Then you copy the **.jar** file to the docker container:
 		```docker cp file_path.jar id-docker:/opt/name/extensions/plugins```
 
-		**file_path.jar**: path where you downloaded the file **.jar**
+		**file_path.jar**: path where you download the file **.jar**
+        
 		**id-docker**: id of the container obtained in the previous step
+        
 		**name**: container name. If you followed the tutorial without making changes, it is **sonarqube**
 
 	- Check in the cli console that you have the **.jar** file in the correct location
 	- Reboot the docker container
 5. Download the [**SonarScanner**](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/)
-	- Dowload the **.zip** file for you OS and set it as a system variable for your OS
+	- Download the **.zip** file for you OS and set it as a system variable for your OS
 	- Ex: On my Mac, 
 		- Download and unzip in a folder called **tools** in $HOME
 		- Then my bash/zsh configuration is as follows:  ```export PATH="$PATH":"$HOME/tools/sonar-scanner/bin"```
-6. Let's go back to going back to ```localhost:9000```
-7. Followed by that you will create a project and you will choose the option **Manually**
-8. Enter a key and a name of your choice
-9. Enter a token for your project of your choice
+6. Let's go back to ```localhost:9000```
+7. Followed by that, create a project and choose the option **Manually**
+8. Enter a key and name that you like
+9. Enter a token for your project
 10. Create a [configuration](https://github.com/insideapp-oss/sonar-flutter#project-configuration) file in your flutter project called: ```sonar-project.properties```
 	```console
 	# Project identification
@@ -120,26 +128,51 @@ Let's see the steps for you to install it and integrate it into your developer d
 	<p align="center" width="100%">
     <img src="https://i.imgur.com/zN4S6nt.png" width="600"/>
 	</p>
-13. Result: You can reload your **dashboard** to see all outputs
+
+    ```console
+    sonar-scanner \
+      -Dsonar.projectKey=NAME \
+      -Dsonar.sources=. \
+      -Dsonar.host.url=http://localhost:9000 \
+      -Dsonar.login=AuthenticationToken -X;  
+    ```
+    
+    
+12. Result: You can reload your **dashboard** to see all outputs
 	<p align="center" width="100%">
     <img src="https://i.imgur.com/6ivPZnm.png" width="600"/>
     <img src="https://i.imgur.com/m3PTgHi.png" width="600"/>
 	</p>
+    
 
-PD: If you get an error when indexing the files in the test-folder, you can follow this [solution](https://stackoverflow.com/questions/29837369/cant-be-indexed-twice-testsourcedirectory-and-sourcedirectory-are-same/40150551#40150551)
+PD: If you get an error when Flutter is indexing the files in the test-folder, you can follow this [solution](https://stackoverflow.com/questions/29837369/cant-be-indexed-twice-testsourcedirectory-and-sourcedirectory-are-same/40150551#40150551)
+
+```console
+sonar.test.inclusions=**/*test*/**
+sonar.exclusions=**/*test*/**
+```
+
+PD2: If you want to exclude **build_runner** classes, you can use the previuos solution.
+
+```console
+sonar.exclusions=**/*.g.dart,**/*.gr.dart,**/*.freezed.dart
+```
 
 
 ## Conclusion
-** Sonarqube ** can become the best ally for projects where you have teams that require evaluating the quality of the code and taking a quality leap. It will allow you to create "rules" so that a team can keep up with customer expectations.
+**Sonarqube** can become the best ally for projects where you have teams that require a current evaluation of the code quality and a quality leap. It will allows you to create "rules" so the team can keep up with customer expectations.
 
 ---
-The steps to run and install sonarqube are short; what I wanted to achieve was to be as detailed as possible for people who are just starting, and need a more detailed step-by-step.
+The steps to run and install sonarqube are short. The thing that I wanted to achieve was to be as detailed as possible for people who are just starting and need a more detailed step-by-step.
 
 
-Greetings everyone, thanks for getting here. 
-Consider giving like, share, and see you in an upcoming Flutter article.
+Thanks to get here. <br/>
+Remember to like and share.
 
-
+See you in an upcoming Flutter article!
+<p align="center" width="100%">
+<img src="https://i.imgur.com/q7fqQHS.gif" width="200"/>
+</p>
 
 
 
@@ -149,3 +182,6 @@ Consider giving like, share, and see you in an upcoming Flutter article.
 - https://docs.docker.com/engine/reference/commandline/cp/
 - https://stackoverflow.com/questions/29837369/cant-be-indexed-twice-testsourcedirectory-and-sourcedirectory-are-same/40150551#40150551
 - https://github.com/insideapp-oss/sonar-flutter
+
+
+###### tags: sonarcloud, flutter, dev

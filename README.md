@@ -1,9 +1,7 @@
 # MyTechBlog
 ### By @jamescardona11
 
-<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width=22> [Github](https://github.com/jamescardona11/)
-
-<img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width=22>[Linkedin](https://www.linkedin.com/in/jamescardona11/)
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width=22> [Github](https://github.com/jamescardona11/)   <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width=22>[Linkedin](https://www.linkedin.com/in/jamescardona11/)
 
 
 
