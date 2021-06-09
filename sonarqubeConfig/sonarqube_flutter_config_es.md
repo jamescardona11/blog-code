@@ -122,6 +122,12 @@ Veamos los pasos para que lo instales y puedas integrarlo en tu día a día.
 	# - legacy (dartanalyzer)
 	# sonar.flutter.analyzer.mode= 
 	```
+    
+    Si quieres usar tu propio linter analyzer agrega esto:
+    ```sonar.dart.analysis.useExistingOptions=true```</br>
+    El **analysis_options.yaml** debe existir en root del proyecto.
+    
+    
 11. Ejecuta el comando para tu OS cómo te lo indica la consola de **SonarQube** en la raíz de tu proyecto. 
 	<p align="center" width="100%">
     <img src="https://i.imgur.com/zN4S6nt.png" width="600"/>
@@ -157,7 +163,10 @@ sonar.exclusions=**/*.g.dart,**/*.gr.dart,**/*.freezed.dart
 ```
 
 ## Conclusión
-**Sonarqube** puede convertirse en el mejor aliado para proyectos donde tengas equipos que requieran evaluar la calidad del código y dar un salto de calidad. Te permitirá crear "reglas" para que un equipo pueda ir a la par de las expectativas de los clientes.
+**Sonarqube** puede convertirse en un aliado para proyectos donde tengas equipos que requieran evaluar la calidad del código y dar un salto de calidad. Te permitirá crear "reglas" para que un equipo pueda ir a la par de las expectativas de los clientes. Aun esta muy crudo para flutter y creo que puede bastar con una de las siguientes librerias.
+
+**Static code anlysis**, creo que en la gran mayoria basta con usar alguna de estas librarias [Lint](https://pub.dev/packages/lint), [VeryGoodAnalysis](https://pub.dev/packages/very_good_analysis), [Pedantic](https://pub.dev/packages/pedantic)
+
 
 ---
 Realmente los pasos para ejecutar e instalar sonarqube son cortos; lo que quería lograr era ser lo más detallado posible para personas que apenas estén empezando y necesitan un paso a paso más detallado.
@@ -166,7 +175,7 @@ Realmente los pasos para ejecutar e instalar sonarqube son cortos; lo que querí
 Gracias por llegar hasta acá.<br/>
 Recuerda dar un like y compartir.
 
-Nos vemos en un próximo articulo de Flutter.
+Nos vemos en un próximo articulo de Flutter!!
 <p align="center" width="100%">
 <img src="https://i.imgur.com/q7fqQHS.gif" width="200"/>
 </p>
