@@ -124,6 +124,11 @@ Let's see the steps to install it and integrate it into your developer day.
 	# - legacy (dartanalyzer)
 	# sonar.flutter.analyzer.mode= 
 	```
+    
+    If you want to use your own linter analyzer add this:
+    ```sonar.dart.analysis.useExistingOptions=true```</br>
+    The **analysis_options.yaml** file already exists under the project root
+    
 11. Execute the command for your OS as indicated by the **SonarQube** console in the root of your project
 	<p align="center" width="100%">
     <img src="https://i.imgur.com/zN4S6nt.png" width="600"/>
@@ -160,16 +165,22 @@ sonar.exclusions=**/*.g.dart,**/*.gr.dart,**/*.freezed.dart
 
 
 ## Conclusion
-**Sonarqube** can become the best ally for projects where you have teams that require a current evaluation of the code quality and a quality leap. It will allows you to create "rules" so the team can keep up with customer expectations.
+** Sonarqube ** can become an ally for projects where you have teams that require evaluating the quality of the code and taking a quality leap. It will allow you to create "rules" so that a team can keep up with customer expectations. It is still very crude for flutter and I think one of the following libraries may suffice.
+
+
+**Static code anlysis**, I think that in the most cases it is enough to use one of these libraries: [Lint](https://pub.dev/packages/lint), [VeryGoodAnalysis](https://pub.dev/packages/very_good_analysis), [Pedantic](https://pub.dev/packages/pedantic)
 
 ---
 The steps to run and install sonarqube are short. The thing that I wanted to achieve was to be as detailed as possible for people who are just starting and need a more detailed step-by-step.
 
 
 Thanks to get here. <br/>
-Remember to like and share.
+You can share this article to help another developer to continue improving their productivity when writing applications with Flutter.
 
-See you in an upcoming Flutter article!
+
+There's a Spanish version of this article on [hashnote](). You're welcome. 🇪🇸
+
+See you in an upcoming Flutter article!!
 <p align="center" width="100%">
 <img src="https://i.imgur.com/q7fqQHS.gif" width="200"/>
 </p>
