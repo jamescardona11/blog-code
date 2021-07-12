@@ -12,10 +12,10 @@ Trataremos de responder:  ¿Para qué se usa?, ¿Cómo instalarlo?
 </p>
 
 
-# Introducción
+## Introducción
 Sonarqube cómo tantas herramientas similares, nos permite realizar un análisis estático de código, esto nos guiará a detectar puntos susceptibles de mejora.
 
-## ¿Por qué usar sonarqube?
+### ¿Por qué usar sonarqube?
 Nos va a dar una ayuda para identificar las cosas que hacemos bien, pero principalmente las cosas que hacemos mal.
 Entre los principales usos, podemos destacar la posibilidad de identificar aspectos tales como: 
 - código duplicado
@@ -28,13 +28,13 @@ Entre los principales usos, podemos destacar la posibilidad de identificar aspec
 - vulnerabilidades
 
 
-## ¿Qué información nos puede mostrar sonarqube?
+### ¿Qué información nos puede mostrar sonarqube?
 - **Quality Gate**: Reglas que el proyecto analizado debe cumplir para poder pasar de etapa.
 - **Bugs y Vulnerabilidades**: Hace referencia a fallos reales o potenciales.
 - **Code smells**: Es un indicativo que puedes mejorar la escritura de tu código. No quiere decir que tengas algún error, pero podría aumentar el riesgo de tener futuros errores.
 - **Coverage**: Nos permite conocer que cantidad de código ha sido probado y validado por los tests.
 
-# ¿Cómo instalarlo y usarlo?
+## ¿Cómo instalarlo y usarlo?
 
 Veamos los pasos para que lo instales y puedas integrarlo en tu día a día.
 
@@ -97,31 +97,31 @@ Veamos los pasos para que lo instales y puedas integrarlo en tu día a día.
 8. Ingresa una key y un nombre de tu elección
 9. Ingresa un token para tu proyecto a tu elección.
 10. Crea un archivo de [configuración](https://github.com/insideapp-oss/sonar-flutter#project-configuration) en tu proyecto de flutter llamado:  ```sonar-project.properties```
-	```console
-	# Project identification
-	sonar.projectKey=flutter_rocks
-	sonar.projectName=Flutter Rocks
-	sonar.projectVersion=1.0
+ ```console
+ # Project identification
+ sonar.projectKey=flutter_rocks
+ sonar.projectName=Flutter Rocks
+ sonar.projectVersion=1.0
 		
-	# Source code location.
-	# Path is relative to the sonar-project.properties file. Defaults to .
-	# Use commas to specify more than one folder.
-	sonar.sources=lib
-	sonar.tests=test
+ # Source code location.
+ # Path is relative to the sonar-project.properties file. Defaults to .
+ # Use commas to specify more than one folder.
+ sonar.sources=lib
+ sonar.tests=test
 
-	# Encoding of the source code. Default is default system encoding.
-	sonar.sourceEncoding=UTF-8
+ # Encoding of the source code. Default is default system encoding.
+ sonar.sourceEncoding=UTF-8
 
-	# Allows reuse of an existing analyzer report
-	# sonar.dart.analysis.reportPath=
+ # Allows reuse of an existing analyzer report
+ # sonar.dart.analysis.reportPath=
 
-	# Analyzer mode
-	# Can be:
-	# - flutter (flutter analyze) - default
-	# - dart (dart analyze)
-	# - legacy (dartanalyzer)
-	# sonar.flutter.analyzer.mode= 
-	```
+ # Analyzer mode
+ # Can be:
+ # - flutter (flutter analyze) - default
+ # - dart (dart analyze)
+ # - legacy (dartanalyzer)
+ # sonar.flutter.analyzer.mode= 
+ ```
     
     Si quieres usar tu propio linter analyzer agrega esto:
     ```sonar.dart.analysis.useExistingOptions=true```</br>
