@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_tutorial_app/config/color.dart';
 
 class TitleWidget extends StatelessWidget {
@@ -14,10 +15,10 @@ class TitleWidget extends StatelessWidget {
         Image.asset('assets/title.png'),
         Text(
           'Terroni',
-          style: TextStyle(
-            fontSize: 22,
+          style: GoogleFonts.poppins(
+            fontSize: 25,
             color: primary,
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ],
