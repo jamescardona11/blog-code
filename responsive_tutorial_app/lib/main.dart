@@ -25,29 +25,35 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Flexible(
-          flex: 1,
-          child: NavMenu(),
-        ),
-        Flexible(
-          flex: 3,
-          child: CardComponent(
-            child: Column(
-              children: [],
+    final size = MediaQuery.of(context).size;
+
+    return SizedBox(
+      width: size.width,
+      height: size.height,
+      child: Row(
+        children: [
+          Flexible(
+            flex: 1,
+            child: NavMenu(),
+          ),
+          Flexible(
+            flex: 3,
+            child: CardComponent(
+              child: Column(
+                children: [],
+              ),
             ),
           ),
-        ),
-        Flexible(
-          flex: 1,
-          child: CardComponent(
-            child: Column(
-              children: [],
+          Flexible(
+            flex: 1,
+            child: CardComponent(
+              child: Column(
+                children: [],
+              ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }
