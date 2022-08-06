@@ -9,16 +9,17 @@ class AssetsManager {
 
   static final String menuDashboard = 'assets/menu_dashboard.png';
   static final String menuCalendar = 'assets/menu_calendar.png';
-  static final String menuAnalytics = 'assets/menu_analytics.png';
+  static final String menuAnalytics = 'assets/menu_stats.png';
   static final String menuWallet = 'assets/menu_wallet.png';
   static final String menuChat = 'assets/menu_chat.png';
-  static final String menuLogout = 'assets/menu_logout.png';
+  static final String menuLogout = 'assets/logout.png';
 
   static final String icFollowers = 'assets/user.png';
   static final String icFollowing = 'assets/add_user.png';
   static final String icComments = 'assets/chat.png';
   static final String icLikes = 'assets/heart.png';
 
+  static final String genderGraph = 'assets/gender.png';
   static final String gender1 = 'assets/gender_1.png';
   static final String gender2 = 'assets/gender_2.png';
   static final String gender3 = 'assets/gender3.png';
@@ -26,6 +27,9 @@ class AssetsManager {
   static final String like = 'assets/like.png';
   static final String comments = 'assets/comments.png';
   static final String bookmark = 'assets/saved.png';
+
+  static final String graphChart = 'assets/graph_chart_1.png';
+  static final String graphLine = 'assets/graph_line.png';
 
   static final String image1 = 'assets/image1.png';
   static final String image2 = 'assets/image2.png';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_tutorial_app/components/card.dart';
+import 'package:responsive_tutorial_app/config/assets.dart';
 import 'package:responsive_tutorial_app/config/color.dart';
 import 'package:responsive_tutorial_app/widgets/menu_item_widget.dart';
 import 'package:responsive_tutorial_app/widgets/title_widget.dart';
@@ -11,12 +12,12 @@ class NavMenu extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final List<MapEntry<String, String>> menuItems = const [
-    MapEntry('DashBoard', 'assets/menu_dashboard.png'),
-    MapEntry('Calendar', 'assets/menu_calendar.png'),
-    MapEntry('Analytics', 'assets/menu_stats.png'),
-    MapEntry('Wallet', 'assets/menu_wallet.png'),
-    MapEntry('Chat', 'assets/menu_chat.png'),
+  final List<MapEntry<String, String>> menuItems = [
+    MapEntry('DashBoard', AssetsManager.menuDashboard),
+    MapEntry('Calendar', AssetsManager.menuCalendar),
+    MapEntry('Analytics', AssetsManager.menuAnalytics),
+    MapEntry('Wallet', AssetsManager.menuWallet),
+    MapEntry('Chat', AssetsManager.menuChat),
   ];
 
   @override
@@ -50,7 +51,7 @@ class NavMenu extends StatelessWidget {
             ),
           ),
           Image.asset(
-            'assets/frame_33.png',
+            AssetsManager.promoImage,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -69,7 +70,7 @@ class NavMenu extends StatelessWidget {
                 ),
                 Spacer(),
                 Image.asset(
-                  'assets/logout.png',
+                  AssetsManager.menuLogout,
                   width: 21,
                   height: 21,
                 ),

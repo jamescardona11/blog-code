@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_tutorial_app/components/card.dart';
 
 import 'components/nav_menu.dart';
+import 'widgets/graph_widget.dart';
 import 'widgets/stats_card_widget.dart';
 
 void main() => runApp(MyApp());
@@ -53,7 +54,9 @@ class HomePage extends StatelessWidget {
             flex: 1,
             child: CardComponent(
               child: Column(
-                children: [],
+                children: [
+                  // GraphWidget(),
+                ],
               ),
             ),
           )

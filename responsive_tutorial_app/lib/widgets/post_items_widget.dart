@@ -1,26 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_tutorial_app/config/assets.dart';
+import 'package:responsive_tutorial_app/model/post.dart';
 
 class PostItemsWidget extends StatelessWidget {
   /// default constructor
   const PostItemsWidget({
     Key? key,
-    required this.date,
-    required this.image,
-    required this.user,
-    required this.message,
-    required this.likes,
-    required this.comments,
-    required this.saved,
+    required this.post,
   }) : super(key: key);
 
-  final String date;
-  final String image;
-  final String user;
-  final String message;
-  final String likes;
-  final String comments;
-  final String saved;
+  final Post post;
 
   @override
   Widget build(BuildContext context) {
@@ -28,21 +17,21 @@ class PostItemsWidget extends StatelessWidget {
       children: [
         RotatedBox(
           quarterTurns: 1,
-          child: Text(date),
+          child: Text(post.date),
         ),
-        Image.asset(image),
+        Image.asset(post.image),
         Column(
           children: [
-            Text(user),
-            Text(message),
+            Text(post.user),
+            Text(post.message),
             Row(
               children: [
                 Image.asset(AssetsManager.like),
-                Text(likes),
+                Text(post.likes),
                 Image.asset(AssetsManager.comments),
-                Text(comments),
+                Text(post.comments),
                 Image.asset(AssetsManager.bookmark),
-                Text(saved),
+                Text(post.saved),
               ],
             )
           ],
