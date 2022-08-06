@@ -7,10 +7,12 @@ class CardComponent extends StatelessWidget {
     required this.child,
     this.width,
     this.height,
+    this.padding = const EdgeInsets.all(0),
   }) : super(key: key);
 
   final double? width;
   final double? height;
+  final EdgeInsets padding;
   final Widget child;
 
   @override
@@ -26,7 +28,10 @@ class CardComponent extends StatelessWidget {
             Radius.circular(20),
           ),
         ),
-        child: child,
+        child: Padding(
+          padding: padding,
+          child: child,
+        ),
       ),
     );
   }

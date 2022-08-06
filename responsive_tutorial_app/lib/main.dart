@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_tutorial_app/components/card.dart';
 
 import 'components/nav_menu.dart';
+import 'widgets/stats_card_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,10 +39,14 @@ class HomePage extends StatelessWidget {
           ),
           Flexible(
             flex: 3,
-            child: CardComponent(
-              child: Column(
-                children: [],
-              ),
+            child: Column(
+              children: [
+                StatsCardWidget(
+                  label: 'Followers',
+                  iconPath: 'assets/user.png',
+                  count: '1000',
+                ),
+              ],
             ),
           ),
           Flexible(
