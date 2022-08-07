@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_tutorial_app/components/card.dart';
 import 'package:responsive_tutorial_app/config/assets.dart';
+
+import 'components/card.dart';
 
 class GenderBreakdownWidget extends StatelessWidget {
   /// default constructor

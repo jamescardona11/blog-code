@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_tutorial_app/components/card.dart';
 import 'package:responsive_tutorial_app/config/assets.dart';
 import 'package:responsive_tutorial_app/config/color.dart';
+
+import 'components/card.dart';
 
 class HeaderMeWidget extends StatelessWidget {
   /// default constructor

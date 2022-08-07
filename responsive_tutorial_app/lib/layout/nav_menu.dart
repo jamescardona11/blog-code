@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_tutorial_app/components/card.dart';
 import 'package:responsive_tutorial_app/config/assets.dart';
 import 'package:responsive_tutorial_app/config/color.dart';
 import 'package:responsive_tutorial_app/widgets/menu_item_widget.dart';
 import 'package:responsive_tutorial_app/widgets/title_widget.dart';
+
+import '../widgets/components/card.dart';
 
 class NavMenu extends StatelessWidget {
   /// default constructor
