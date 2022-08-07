@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'package:responsive_tutorial_app/config/color.dart';
 
@@ -10,7 +9,7 @@ class GraphWidget extends StatelessWidget {
   const GraphWidget({
     Key? key,
     required this.image,
-    required this.label,
+    this.label,
     this.showHeader = false,
     this.width,
     this.height,
@@ -19,7 +18,7 @@ class GraphWidget extends StatelessWidget {
   }) : super(key: key);
 
   final bool showHeader;
-  final String label;
+  final String? label;
   final double? width;
   final double? height;
   final double fontSize;
@@ -43,7 +42,7 @@ class GraphWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          label,
+                          label!,
                           style: TextStyle(
                             fontSize: fontSize,
                             color: blackColor,
@@ -65,6 +64,8 @@ class GraphWidget extends StatelessWidget {
               ),
               Positioned(
                 bottom: 0,
+                left: 0,
+                right: 0,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 10),
                   child: Image.asset(

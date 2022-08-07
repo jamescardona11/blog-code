@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_tutorial_app/config/assets.dart';
 import 'package:responsive_tutorial_app/model/post.dart';
 import 'package:responsive_tutorial_app/widgets/components/card.dart';
+import 'package:responsive_tutorial_app/widgets/gender_breakdown_widget.dart';
 import 'package:responsive_tutorial_app/widgets/graph_widget.dart';
 import 'package:responsive_tutorial_app/widgets/header_graph_widget.dart';
 import 'package:responsive_tutorial_app/widgets/post_items_widget.dart';
@@ -44,13 +45,20 @@ class MainCenterLayout extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: CardComponent(
-                    child: ListView.builder(
-                      itemCount: postElements.length,
-                      itemBuilder: (_, index) => PostItemsWidget(
-                        post: postElements[index],
+                  child: Column(
+                    children: [
+                      GenderBreakdownWidget(),
+                      GraphWidget(
+                        width: 480,
+                        height: 200,
+                        label: '',
+                        image: AssetsManager.graphChart,
+                        showHeader: true,
+                        headerWidget: HeaderGraphWidget(
+                          labelHeader: 'Post shares',
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ),
               ],
