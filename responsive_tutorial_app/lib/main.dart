@@ -136,7 +136,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 15),
                         Expanded(
                           child: ListView.builder(
                             itemCount: feedActivity.length,
