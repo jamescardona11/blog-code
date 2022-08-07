@@ -15,19 +15,22 @@ class HeaderGraphWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          labelHeader,
-          style: GoogleFonts.poppins(
-            fontSize: 18,
-            color: blueColor,
-            fontWeight: FontWeight.w600,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            labelHeader,
+            style: GoogleFonts.poppins(
+              fontSize: 18,
+              color: blueColor,
+              fontWeight: FontWeight.w600,
+            ),
           ),
-        ),
-        Icon(Icons.more_horiz),
-      ],
+          Icon(Icons.more_horiz),
+        ],
+      ),
     );
   }
 }

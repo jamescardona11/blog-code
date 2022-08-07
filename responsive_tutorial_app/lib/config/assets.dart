@@ -29,7 +29,7 @@ class AssetsManager {
   static final String comments = 'assets/comments.png';
   static final String bookmark = 'assets/saved.png';
 
-  static final String graphChart = 'assets/graph_chart_1.png';
+  static final String graphChart = 'assets/graph_chart.png';
   static final String graphLine = 'assets/graph_line.png';
 
   static final String image1 = 'assets/image1.png';

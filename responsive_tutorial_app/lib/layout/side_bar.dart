@@ -30,7 +30,10 @@ class SideBar extends StatelessWidget {
               padding: EdgeInsets.all(10),
               child: Column(
                 children: [
-                  HeaderSideBar(),
+                  HeaderTabsWidget(
+                    label1: 'Activity feed',
+                    label2: 'Mentions',
+                  ),
                   SizedBox(height: 15),
                   Expanded(
                     child: ListView.builder(
@@ -50,10 +53,15 @@ class SideBar extends StatelessWidget {
   }
 }
 
-class HeaderSideBar extends StatelessWidget {
-  const HeaderSideBar({
+class HeaderTabsWidget extends StatelessWidget {
+  const HeaderTabsWidget({
     Key? key,
+    required this.label1,
+    required this.label2,
   }) : super(key: key);
+
+  final String label1;
+  final String label2;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +70,7 @@ class HeaderSideBar extends StatelessWidget {
       children: [
         Column(
           children: [
-            HeaderSimulateTabs(labelHeader: 'Activity feed'),
+            HeaderSimulateTabs(labelHeader: label1),
             ColoredBox(
               color: blueColor,
               child: SizedBox(
@@ -73,7 +81,7 @@ class HeaderSideBar extends StatelessWidget {
           ],
         ),
         HeaderSimulateTabs(
-          labelHeader: 'Mentions',
+          labelHeader: label2,
         ),
       ],
     );

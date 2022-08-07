@@ -10,6 +10,7 @@ class GraphWidget extends StatelessWidget {
   const GraphWidget({
     Key? key,
     required this.image,
+    required this.label,
     this.showHeader = false,
     this.width,
     this.height,
@@ -18,6 +19,7 @@ class GraphWidget extends StatelessWidget {
   }) : super(key: key);
 
   final bool showHeader;
+  final String label;
   final double? width;
   final double? height;
   final double fontSize;
@@ -36,33 +38,39 @@ class GraphWidget extends StatelessWidget {
               Column(
                 children: [
                   if (showHeader && headerWidget != null) headerWidget!,
-                  Row(
-                    children: [
-                      Text(
-                        '1.05m',
-                        style: TextStyle(
-                          fontSize: fontSize,
-                          color: blackColor,
-                          fontWeight: FontWeight.w600,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Row(
+                      children: [
+                        Text(
+                          label,
+                          style: TextStyle(
+                            fontSize: fontSize,
+                            color: blackColor,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      Text(
-                        '+8.5%',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: greenColor,
-                          fontWeight: FontWeight.w600,
+                        Text(
+                          '+8.5%',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: greenColor,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   )
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: Image.asset(
-                  image,
-                  color: greenColor,
+              Positioned(
+                bottom: 0,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Image.asset(
+                    image,
+                    color: greenColor,
+                  ),
                 ),
               ),
             ],
