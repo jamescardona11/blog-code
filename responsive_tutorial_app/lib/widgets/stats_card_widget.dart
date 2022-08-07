@@ -18,39 +18,42 @@ class StatsCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CardComponent(
-      padding: const EdgeInsets.all(10),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            children: [
-              Text(
-                label,
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  color: menuColor,
-                  fontWeight: FontWeight.w400,
+    return Padding(
+      padding: const EdgeInsets.only(right: 20),
+      child: CardComponent(
+        padding: const EdgeInsets.all(15),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Column(
+              children: [
+                Text(
+                  label,
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    color: blueColor,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
-              ),
-              Text(
-                '$count\K',
-                style: GoogleFonts.poppins(
-                  fontSize: 23,
-                  color: menuColor,
-                  fontWeight: FontWeight.w600,
+                Text(
+                  '$count\K',
+                  style: GoogleFonts.poppins(
+                    fontSize: 23,
+                    color: blueColor,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(width: 50),
-          Image.asset(
-            iconPath,
-            width: 30,
-            height: 30,
-          ),
-        ],
+              ],
+            ),
+            SizedBox(width: 70),
+            Image.asset(
+              iconPath,
+              width: 30,
+              height: 30,
+            ),
+          ],
+        ),
       ),
     );
   }

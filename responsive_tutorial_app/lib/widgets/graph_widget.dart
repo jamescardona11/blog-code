@@ -39,7 +39,7 @@ class GraphWidget extends StatelessWidget {
                     labelHeader!,
                     style: GoogleFonts.poppins(
                       fontSize: 18,
-                      color: menuColor,
+                      color: blueColor,
                       fontWeight: FontWeight.w600,
                     ),
                   ),

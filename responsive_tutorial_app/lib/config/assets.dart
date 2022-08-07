@@ -6,6 +6,7 @@ class AssetsManager {
   static final String socialInstagram = 'assets/instagram.png';
   static final String socialLinkedin = 'assets/linkedin.png';
   static final String socialYoutube = 'assets/youtube.png';
+  static final String socialTwitter = 'assets/twitter.png';
 
   static final String menuDashboard = 'assets/menu_dashboard.png';
   static final String menuCalendar = 'assets/menu_calendar.png';

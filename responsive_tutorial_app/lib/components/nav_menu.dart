@@ -64,7 +64,7 @@ class NavMenu extends StatelessWidget {
                   'Logout',
                   style: GoogleFonts.poppins(
                     fontSize: 18,
-                    color: menuColor,
+                    color: blueColor,
                     fontWeight: FontWeight.w600,
                   ),
                 ),

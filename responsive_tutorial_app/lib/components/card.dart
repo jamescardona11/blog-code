@@ -7,11 +7,13 @@ class CardComponent extends StatelessWidget {
     required this.child,
     this.width,
     this.height,
+    this.radius = 20,
     this.padding = const EdgeInsets.all(0),
   }) : super(key: key);
 
   final double? width;
   final double? height;
+  final double radius;
   final EdgeInsets padding;
   final Widget child;
 
@@ -23,9 +25,9 @@ class CardComponent extends StatelessWidget {
       child: Card(
         color: Colors.white,
         elevation: 6,
-        shape: const RoundedRectangleBorder(
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(20),
+            Radius.circular(radius),
           ),
         ),
         child: Padding(

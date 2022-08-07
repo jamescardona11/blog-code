@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_tutorial_app/model/feed.dart';
 
-class FeedActivityWidget extends StatelessWidget {
+class FeedItemActivityWidget extends StatelessWidget {
   /// default constructor
-  const FeedActivityWidget({
+  const FeedItemActivityWidget({
     Key? key,
     required this.feed,
   }) : super(key: key);
