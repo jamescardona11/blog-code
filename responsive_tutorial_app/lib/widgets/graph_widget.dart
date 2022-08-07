@@ -26,45 +26,49 @@ class GraphWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CardComponent(
-      width: width,
-      height: height,
-      child: Stack(
-        children: [
-          Column(
+    return Row(
+      children: [
+        CardComponent(
+          width: width,
+          height: height,
+          child: Stack(
             children: [
-              if (showHeader && headerWidget != null) headerWidget!,
-              Row(
+              Column(
                 children: [
-                  Text(
-                    '1.05m',
-                    style: TextStyle(
-                      fontSize: fontSize,
-                      color: blackColor,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  Text(
-                    '+8.5%',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: greenColor,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
+                  if (showHeader && headerWidget != null) headerWidget!,
+                  Row(
+                    children: [
+                      Text(
+                        '1.05m',
+                        style: TextStyle(
+                          fontSize: fontSize,
+                          color: blackColor,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        '+8.5%',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: greenColor,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  )
                 ],
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Image.asset(
+                  image,
+                  color: greenColor,
+                ),
+              ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10),
-            child: Image.asset(
-              image,
-              color: greenColor,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

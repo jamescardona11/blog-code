@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_tutorial_app/config/assets.dart';
 import 'package:responsive_tutorial_app/widgets/graph_widget.dart';
+import 'package:responsive_tutorial_app/widgets/header_graph_widget.dart';
 import 'package:responsive_tutorial_app/widgets/stats_card_widget.dart';
 import 'package:responsive_tutorial_app/widgets/top_menu_widget.dart';
 
@@ -25,12 +26,10 @@ class MainCenterLayout extends StatelessWidget {
           RowStatsCardWidget(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Row(
-              children: [
-                GraphWidget(
-                  image: AssetsManager.graphChart,
-                ),
-              ],
+            child: GraphWidget(
+              image: AssetsManager.graphChart,
+              showHeader: true,
+              headerWidget: MultiLabelHeaderWidget(),
             ),
           )
         ],

@@ -39,24 +39,30 @@ class MultiLabelHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Column(
-          children: [
-            HeaderSimulateTabs(labelHeader: 'Reach'),
-            ColoredBox(
-              color: blueColor,
-              child: SizedBox(
-                height: 1,
-                width: 120,
-              ),
-            )
-          ],
-        ),
-        HeaderSimulateTabs(labelHeader: 'Impressions'),
-        HeaderSimulateTabs(labelHeader: 'New Followers'),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: 10,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Column(
+            children: [
+              HeaderSimulateTabs(labelHeader: 'Reach'),
+              ColoredBox(
+                color: blueColor,
+                child: SizedBox(
+                  height: 1,
+                  width: 120,
+                ),
+              )
+            ],
+          ),
+          HeaderSimulateTabs(labelHeader: 'Impressions'),
+          HeaderSimulateTabs(labelHeader: 'New Followers'),
+        ],
+      ),
     );
   }
 }
