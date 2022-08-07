@@ -50,9 +50,7 @@ class NavMenu extends StatelessWidget {
               ),
             ),
           ),
-          Image.asset(
-            AssetsManager.promoImage,
-          ),
+          Image.asset(AssetsManager.promoImage),
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
