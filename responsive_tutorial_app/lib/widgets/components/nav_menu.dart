@@ -23,61 +23,76 @@ class NavMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CardComponent(
-      width: 260,
-      padding: const EdgeInsets.only(top: 20),
-      child: Column(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TitleWidget(),
-                  const SizedBox(height: 50),
-                  Expanded(
-                    child: ListView.builder(
-                      itemCount: menuItems.length,
-                      itemBuilder: (_, index) => MenuItemWidget(
-                        iconPath: menuItems[index].value,
-                        label: menuItems[index].key,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth < 1360)
+          return ElevatedButton(
+            onPressed: () {},
+            child: Image.asset(AssetsManager.iconMenu),
+            style: ElevatedButton.styleFrom(
+              shape: CircleBorder(),
+              padding: EdgeInsets.all(20),
+              primary: Colors.white,
+            ),
+          );
+
+        return CardComponent(
+          width: 260,
+          padding: const EdgeInsets.only(top: 20),
+          child: Column(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TitleWidget(),
+                      const SizedBox(height: 50),
+                      Expanded(
+                        child: ListView.builder(
+                          itemCount: menuItems.length,
+                          itemBuilder: (_, index) => MenuItemWidget(
+                            iconPath: menuItems[index].value,
+                            label: menuItems[index].key,
+                          ),
+                        ),
+                      ),
+
+                      // Image.asset('assets/frame_33.png'),
+                    ],
+                  ),
+                ),
+              ),
+              Image.asset(AssetsManager.promoImage),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Logout',
+                      style: GoogleFonts.poppins(
+                        fontSize: 18,
+                        color: blueColor,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                  ),
-
-                  // Image.asset('assets/frame_33.png'),
-                ],
-              ),
-            ),
+                    Spacer(),
+                    Image.asset(
+                      AssetsManager.menuLogout,
+                      width: 21,
+                      height: 21,
+                    ),
+                  ],
+                ),
+              )
+            ],
           ),
-          Image.asset(AssetsManager.promoImage),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 10,
-            ),
-            child: Row(
-              children: [
-                Text(
-                  'Logout',
-                  style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    color: blueColor,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                Spacer(),
-                Image.asset(
-                  AssetsManager.menuLogout,
-                  width: 21,
-                  height: 21,
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
+        );
+      },
     );
   }
 }

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_tutorial_app/config/model/responsive/ResponsiveWidget.dart';
 import 'package:responsive_tutorial_app/layout/mobile_layout.dart';
 import 'package:responsive_tutorial_app/layout/tablet_layout.dart';
 import 'package:responsive_tutorial_app/layout/web_layout.dart';
+
+import 'responsive/ResponsiveWidget.dart';
 
 void main() => runApp(MyApp());
 

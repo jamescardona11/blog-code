@@ -18,11 +18,15 @@ class WebLayout extends StatelessWidget {
       width: size.width,
       height: size.height,
       padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Row(
+      child: Stack(
         children: [
+          Row(
+            children: [
+              Expanded(child: MainCenterLayout()),
+              SideBar(),
+            ],
+          ),
           NavMenu(),
-          Expanded(child: MainCenterLayout()),
-          SideBar(),
         ],
       ),
     );
