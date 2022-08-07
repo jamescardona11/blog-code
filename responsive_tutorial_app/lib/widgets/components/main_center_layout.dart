@@ -17,10 +17,14 @@ class MainCenterLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 30,
-        vertical: 20,
+      padding: EdgeInsets.only(
+        left: size.width > 1360 ? 290 : 80,
+        right: 30,
+        top: 10,
+        bottom: 10,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -25,7 +25,9 @@ class NavMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < 1360)
+        final size = MediaQuery.of(context).size;
+
+        if (size.width < 1360) {
           return ElevatedButton(
             onPressed: () {},
             child: Image.asset(AssetsManager.iconMenu),
@@ -35,6 +37,7 @@ class NavMenu extends StatelessWidget {
               primary: Colors.white,
             ),
           );
+        }
 
         return CardComponent(
           width: 260,

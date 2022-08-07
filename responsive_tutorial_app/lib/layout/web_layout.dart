@@ -20,13 +20,9 @@ class WebLayout extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: Stack(
         children: [
-          Row(
-            children: [
-              Expanded(child: MainCenterLayout()),
-              SideBar(),
-            ],
-          ),
+          MainCenterLayout(),
           NavMenu(),
+          SideBar(),
         ],
       ),
     );
