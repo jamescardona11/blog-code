@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_tutorial_app/config/color.dart';
 import 'package:responsive_tutorial_app/model/feed.dart';
 import 'package:responsive_tutorial_app/widgets/feed_activity_widget.dart';
 import 'package:responsive_tutorial_app/widgets/header_me_widget.dart';
 import 'package:responsive_tutorial_app/widgets/header_simulate_tabs.dart';
 
-import '../widgets/components/card.dart';
+import 'card.dart';
 
 class SideBar extends StatelessWidget {
   /// default constructor
