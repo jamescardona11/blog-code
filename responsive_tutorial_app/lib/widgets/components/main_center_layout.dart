@@ -19,9 +19,11 @@ class MainCenterLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
+    final leftPadding = size.width < 1360 || size.width > 1630 ? 25.0 : 290.0;
+
     return Padding(
       padding: EdgeInsets.only(
-        left: size.width > 1360 ? 290 : 80,
+        left: leftPadding,
         right: 30,
         top: 10,
         bottom: 10,

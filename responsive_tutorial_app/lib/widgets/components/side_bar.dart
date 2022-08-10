@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_tutorial_app/config/assets.dart';
 import 'package:responsive_tutorial_app/config/color.dart';
 import 'package:responsive_tutorial_app/model/feed.dart';
 import 'package:responsive_tutorial_app/widgets/feed_activity_widget.dart';
@@ -20,7 +19,7 @@ class SideBar extends StatelessWidget {
       builder: (context, constraints) {
         final size = MediaQuery.of(context).size;
 
-        if (size.width < 1590)
+        if (size.width <= 1630)
           return Align(
             alignment: Alignment.topRight,
             child: ElevatedButton(

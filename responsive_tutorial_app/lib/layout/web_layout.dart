@@ -18,12 +18,27 @@ class WebLayout extends StatelessWidget {
       width: size.width,
       height: size.height,
       padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Stack(
-        children: [
-          MainCenterLayout(),
-          NavMenu(),
-          SideBar(),
-        ],
+      child: LayoutBuilder(
+        builder: (_, constraints) {
+          if (constraints.maxWidth <= 1630) {
+            return Stack(
+              children: [
+                MainCenterLayout(),
+                NavMenu(),
+                SideBar(),
+              ],
+            );
+          } else {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                NavMenu(),
+                MainCenterLayout(),
+                SideBar(),
+              ],
+            );
+          }
+        },
       ),
     );
   }
