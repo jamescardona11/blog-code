@@ -33,114 +33,143 @@ class MainCenterLayout extends StatelessWidget {
         children: [
           TopMenuWidget(),
           SizedBox(height: 30),
-          RowStatsCardWidget(),
-          StatisticsWidget(),
-          SizedBox(
-            height: 480,
-            width: 960,
-            child: Row(
-              children: [
-                Expanded(
-                  child: CardComponent(
-                    child: ListView.builder(
-                      itemCount: postElements.length,
-                      itemBuilder: (_, index) => PostItemsWidget(
-                        post: postElements[index],
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      GenderBreakdownWidget(),
-                      GraphWidget(
-                        width: 480,
-                        height: 200,
-                        label: '',
-                        image: AssetsManager.graphChart,
-                        showHeader: true,
-                        headerWidget: HeaderGraphWidget(
-                          labelHeader: 'Post shares',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+          _RowStatsCardWidget(),
+          _StatisticsWidget(),
+          _PostWidgetAndGender(),
         ],
       ),
     );
   }
 }
 
-class StatisticsWidget extends StatelessWidget {
-  const StatisticsWidget({
+class _PostWidgetAndGender extends StatelessWidget {
+  const _PostWidgetAndGender({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 480,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            GraphWidget(
-              width: 520,
-              label: '1.05m',
-              image: AssetsManager.graphLine,
-              showHeader: true,
-              headerWidget: MultiLabelHeaderWidget(),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+    final size = MediaQuery.of(context).size;
+    return Container(
+      constraints: BoxConstraints(
+        minHeight: 360,
+        maxHeight: size.height * 0.4,
+        maxWidth: 960,
+        minWidth: 720,
+      ),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          return Row(
+            children: [
+              Expanded(
+                child: CardComponent(
+                  height: constraints.maxHeight,
+                  child: ListView.builder(
+                    itemCount: postElements.length,
+                    itemBuilder: (_, index) => PostItemsWidget(
+                      post: postElements[index],
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Column(
                   children: [
+                    GenderBreakdownWidget(),
                     GraphWidget(
-                      width: 220,
-                      height: 220,
-                      label: '31.6k',
+                      width: 480,
+                      height: 200,
+                      label: '',
                       image: AssetsManager.graphChart,
                       showHeader: true,
                       headerWidget: HeaderGraphWidget(
                         labelHeader: 'Post shares',
                       ),
                     ),
-                    GraphWidget(
-                      width: 220,
-                      height: 220,
-                      label: '2.7k',
-                      image: AssetsManager.graphChart,
-                      showHeader: true,
-                      headerWidget: HeaderGraphWidget(
-                        labelHeader: 'New Followers',
-                      ),
-                    ),
                   ],
                 ),
-                CardComponent(
-                  width: 440,
-                  height: 180,
-                  child: Container(),
-                ),
-              ],
-            )
-          ],
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _StatisticsWidget extends StatelessWidget {
+  const _StatisticsWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Container(
+      constraints: BoxConstraints(
+        minHeight: 360,
+        maxHeight: size.height * 0.4,
+        maxWidth: 960,
+        minWidth: 720,
+      ),
+      child: LayoutBuilder(
+        builder: (context, constraints) => Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              GraphWidget(
+                width: 520,
+                label: '1.05m',
+                image: AssetsManager.graphLine,
+                showHeader: true,
+                headerWidget: MultiLabelHeaderWidget(),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      GraphWidget(
+                        width: 220,
+                        height: 220,
+                        label: '31.6k',
+                        image: AssetsManager.graphChart,
+                        showHeader: true,
+                        headerWidget: HeaderGraphWidget(
+                          labelHeader: 'Post shares',
+                        ),
+                      ),
+                      GraphWidget(
+                        width: 220,
+                        height: 220,
+                        label: '2.7k',
+                        image: AssetsManager.graphChart,
+                        showHeader: true,
+                        headerWidget: HeaderGraphWidget(
+                          labelHeader: 'New Followers',
+                        ),
+                      ),
+                    ],
+                  ),
+                  CardComponent(
+                    width: 440,
+                    height: constraints.maxHeight * 0.4,
+                    child: Container(),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
-class RowStatsCardWidget extends StatelessWidget {
-  const RowStatsCardWidget({
+class _RowStatsCardWidget extends StatelessWidget {
+  const _RowStatsCardWidget({
     Key? key,
   }) : super(key: key);
 

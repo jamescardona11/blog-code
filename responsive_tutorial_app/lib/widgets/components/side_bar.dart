@@ -37,7 +37,7 @@ class SideBar extends StatelessWidget {
           );
 
         return SizedBox(
-          width: size.width < 1625 ? 310 : 340,
+          width: 340,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
