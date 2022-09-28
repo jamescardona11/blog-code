@@ -24,7 +24,7 @@ En palabras mías: Git nos va a ayudar que el historial sea una "versión" sobre
 - v1 => código con el feature #1
 - v2 => código con el feature #2
 
-![img1](/static/images/git/git-basic/img1.png)
+![img1](https://i.imgur.com/otPTp6f.png)
 
 Mantenemos el historial y adicional podemos crear estrategias más óptimas para trabajo en equipo, resolución de problemas y algunas cosas más.
 Realmente cada versión (v0, v1, v2) de mí ejemplo anterior sé conoce como commits.
@@ -123,11 +123,11 @@ Cuando hacemos cambios el historial sé va a ver de forma lineal, las ramas son 
 
 El siguiente gráfico tiene la rama principal que es la secuencia de commits c1,c2 y de ahí sé bifurca en una nueva branch y la rama principal sigue en c3 y c4.
 
-![merge](/static/images/git/git-basic/img2.png)
+![merge](https://i.imgur.com/2L4alPP.png)
 
 El objetivo de esto es poder luego "mezclar" las dos ramas para seguir en una sola y repetir el proceso de sacar nuevas ramas cuando requiera crear una nueva funcionalidad, dividir el trabajo, hacer una prueba de concepto sobre mí proyecto, etc.
 
-![merge-goal](/static/images/git/git-basic/img3.png)
+![merge-goal](https://i.imgur.com/9zmKqSG.png)
 
 `Todo el tema de branch lo profundizaremos en el post numero dos de esta serie.`
 

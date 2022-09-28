@@ -10,7 +10,8 @@ Hacer aplicaciones es un tarea sencilla y generalmente orientada a dispositivos 
 La verdad no es algo muy complejo, existen muchas librerías que nos ayudan a solucionar este problema, vamos a entender la base de estas librerías y entender lo que hacen estás para adaptar nuestra pantalla de forma responsive.
 
 <p align="center" width="100%">
-  <img src="/static/images/flutter-web/responsive_example.gif" width="450" />
+
+  <img src="https://i.imgur.com/3EldbWc.gif" width="450" />
 </p>
 
 ### Estrategia para hacer una app responsive
@@ -128,7 +129,8 @@ class HomePage extends StatelessWidget {
 ```
 
 <p align="center" width="100%">
-  <img src="/static/images/flutter-web/orientation.png" width="250" />
+
+  <img src="https://i.imgur.com/TCpDBv3.png" width="250" />
 </p>
 
 #### 4. LayoutBuilder
@@ -171,7 +173,7 @@ Este post trata de responsive así que no me voy a detener mucho en como desarro
 2. Puedes usar este [repositorio](https://github.com/jamescardona11/my-blog-tutorials/tree/dashboard-web-responsive) la rama (**dashboard-web-responsive**), con el panel listo en web y saltar hasta la sección, **Empecemos el responsive**.
 
 <p align="center" width="100%">
-  <img src="/static/images/flutter-web/ui_dashboard.png" width="450" />
+  <img src="https://i.imgur.com/WofXxha.png" width="450" />
 </p>
 
 ### Empecemos el responsive
@@ -289,7 +291,7 @@ Una de las posibles formas de hacer esto es tener dos tipos de vistas, una por c
 Mi idea es esta:
 
 <p align="center" width="100%">
-  <img src="/static/images/flutter-web/web_responsive_approach_1.gif" width="450" />
+  <img src="https://i.imgur.com/tmtikTR.gif" width="450" />
 </p>
 
 Entonces agreguemos el LayoutBuilder y con las dos vistas Row y Stack, el punto de control que voy a usar es 1630 para cambiar entre vistas.
@@ -327,7 +329,7 @@ El NavMenu va quedar así.
 ```dart
 ...
 @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth < 1360)
@@ -349,7 +351,7 @@ El SideBar va quedar así.
 ```dart
 ...
 @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         final size = MediaQuery.of(context).size;
@@ -379,7 +381,7 @@ Por último vamos a crear un LeftPadding para el MainCenterLayout
 ```dart
 ...
 @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
     final leftPadding = size.width < 1360 || size.width > 1630 ? 25.0 : 290.0;

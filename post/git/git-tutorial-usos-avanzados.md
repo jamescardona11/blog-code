@@ -67,7 +67,7 @@ Git nos da la posibilidad de usar un "sub-espacio" temporal, esto es lo que se c
 
 Cuando usamos el comando `git stash list` sale algo parecido a esto:
 
-![stash-list](/static/images/git/git-advance/stash-list.png)
+![stash-list](https://i.imgur.com/7jufv66.png)
 
 Entendamos está información:
 
@@ -94,14 +94,14 @@ Recuerdas el concepto de **HEAD**, cuando hacemos un merge y queremos devolverno
 Básicamente, el cherry pick es un comando que nos permite integrar, desde una branch B, un único commit a la rama destino. Esto es útil cuando tenemos una funcionalidad compartida que aun no se ha integrado en la rama destino, pero se require para poder seguir el ciclo de desarrollo.
 Otro caso de uso es cuando tenemos un hotfix por medio de un cherry pick podemos traer el cambio del hotfix a una rama destino.
 
-![cherry-pick](/static/images/git/git-advance/cherry-pick.png)
+![cherry-pick](https://i.imgur.com/3exgITA.png)
 
 ### Uso del reflog
 
 El reflog es el 'diario', el journal donde se registran todas las interacciones con git.
 Es fácil de usar, pero poderoso para que podamos complementar nuestro trabajo a la hora de buscar y encontrar diferentes acciones realizadas previamente
 
-![reflog](/static/images/git/git-advance/reflog.png)
+![reflog](https://i.imgur.com/JmsRXnn.png)
 
 En el siguiente tutorial veremos varios usos de este comando.
 

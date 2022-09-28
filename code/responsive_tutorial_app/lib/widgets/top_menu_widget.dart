@@ -13,7 +13,7 @@ class TopMenuWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        left: 35,
+        left: 50,
         right: 20,
       ),
       child: Row(

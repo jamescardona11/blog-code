@@ -27,7 +27,7 @@ Una branch nos permite independizar el trabajo y enfocarnos en pequeñas unidade
 
 #### ¿Qué es el HEAD?
 
-![head](/static/images/git/git-branch/head.png)
+![head](https://i.imgur.com/3m3kBc6.png)
 
 Git almacena nuestro trabajo enlazando la historia de nuestros commits por medio de _hash_, pero para facilitarnos parte de como se visualiza o no tener que acordarnos de los _hash_ nos provee un indicador que se llama **HEAD**, entonces la parte superior del historial tiene un **HEAD~0**, a medida que descendemos vamos aumentando el índice: _HEAD~1_, _HEAD~2_, _HEAD~n_.
 
@@ -43,7 +43,7 @@ Cuando borramos una branch, lo que estamos haciendo es borrar el tag que apunta 
 Cuando unimos dos branches diferentes, git se encarga de unir la mayor cantidad de código en uno solo usando estrategias automáticas, pero cuando ambas branches hacen modificaciones sobre lines o archivos donde git no pueda decidir como es la mejor forma de resolver esas diferencias va a mostrar una alerta que se conoce como **conflictos**.
 
 Esto es un ejemplo de un conflicto
-![diff](/static/images/git/git-branch/diff.png)
+![diff](https://i.imgur.com/uSIsaUo.png)
 
 #### ¿Cómo se resuelven?
 
@@ -57,13 +57,13 @@ La recomendación para mezclar conflictos es usar una herramienta externa integr
 Hay varias estrategias para unir branches, pero podemos decir que estás dos son las más famosas, es importante entender que no es que una sea mejor que la otra, simplemente son diferentes en su forma de como queda el historial o gráfico de commits.
 Su uso depende de las estrategias del equipo o los requisitos del proyecto.
 
-![mergevsrebase](/static/images/git/git-branch/base-merge.png)
+![mergevsrebase](https://i.imgur.com/V5hElXV.png)
 
 #### Merge
 
 Es una estrategia muy usada y su ejecución es sencilla, simplemente crea un nuevo punto llamado _merge commit_ donde está la unión y resultado final de la unión. Adicional, preserva el historial conectando la branch que estamos mezclando.
 
-![merge](/static/images/git/git-branch/merge-final.png)
+![merge](https://i.imgur.com/kZTX9X9.png)
 
 #### Rebase
 
@@ -75,7 +75,7 @@ Es una estrategia no tan común y con algunas consideraciones adicionales, en la
 
 En esta secuencia se puede ver que el historial se sobrescribe y se crean uno nuevo.
 
-![rebase](/static/images/git/git-branch/rebase-final.png)
+![rebase](https://i.imgur.com/ixozRBG.png)
 
 **Advertencia** No usar rebase sobre commits que ya están compartidos en una branch remota
 
@@ -126,7 +126,7 @@ Cuando el release esta listo se debe enviar a la branch main y adicional a la br
 
 Son branches que sirven para reparar errores en producción, siempre deben salir de la branch main. Cuando se termine la corrección debe integrarse a main y a develop.
 
-![gitflow](/static/images/git/git-branch/workflow-gitflow.png)
+![gitflow](https://i.imgur.com/6MSdEke.png)
 
 #### Trunk-Based Development
 
@@ -148,7 +148,7 @@ Madurez sin esto esta estrategia se verá impactada por múltiples conflictos qu
 - Si la frecuencia de release es alta, trunk based development es la estrategia adecuada.
 - Equipos maduros y productos establecidos, con sus tiempos y fechas de release bien definidos, es probable que no lo necesiten
 
-![tbd](/static/images/git/git-branch/workflow-tbd.png)
+![tbd](https://i.imgur.com/91do0rJ.png)
 
 &nbsp;
 &nbsp;
