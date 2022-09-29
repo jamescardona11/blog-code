@@ -137,16 +137,10 @@ Tomar decisiones de arquitectura requiere un equilibrio y ese equilibrio nos lle
 
 Cuando encontramos información en internet nos dan una solución técnica que no involucra un contexto y podemos pensar que la arquitectura es una solución técnica cuando inicialmente es una solución del negocio.
 
-
-
-
-
 @@@ Sera que cierro la primer parte y arranco acá segundo post
 
 @@@ para cerrar debo concluir y cerrar con algo poderoso
 
 #### Conceptos para básicos
-
-
 
 #### Arquitectura por capas
