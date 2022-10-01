@@ -23,19 +23,14 @@ Flutter lanza esta funcionalidad para:
 En programación reactiva tenemos algunos conceptos importantes y básicos:
 
 - Stream de datos: Es el flujo de datos que va cambiando
-
 - **Observable**: Captura el flujo de datos y espera que alguien se subscriba
-
 - Subject: Emisor de eventos, cuando hay un nuevo evento por medio del subject el observable notifica a todos los que están subscritos
-
 - **Subscription**: La función para conectarse que el observer empiece a escuchar los cambios del observable
-
 - **Observer**: Quien se subscribe al observer
-
 - Operators: Son funciones que modifican el flujo de datos antes de llegar al observer
 
 <div>
-<img title="" src="https://i.imgur.com/vgI3rDR.png" alt="" data-align="center">
+<img title="" src="https://i.imgur.com/oDmAMnS.png" alt="" data-align="center">
 </div>
 
 volvamos a flutter...
@@ -206,8 +201,14 @@ Donde crearemos un state-management y vamos a hacer ejemplos más complejos usan
 
 Si quieres profundizar más, te recomiendo mucho  [Blog de Vandad Nahavandipoor](https://vandad.sh/blog/)
 
-Código en github: 
+Código en github: [Code](https://github.com/jamescardona11/my-personal-blog/tree/main/code/usign_stream_flutter)
 
+
+Gracias por llegar hasta acá, Dale me gusta a mi artículo 🤞Suscríbete a mi boletín si estás interesado en artículos como estos.
+
+<p align="center" width="100%">
+  <img src="https://media.giphy.com/media/3oEduOnl5IHM5NRodO/giphy.gif" width="200" />
+</p>
 ## Referencias:
 
 Ref1: https://www.youtube.com/watch?v=tUB3rNsMYAk
