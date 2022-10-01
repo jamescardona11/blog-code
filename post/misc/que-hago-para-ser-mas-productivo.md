@@ -123,7 +123,7 @@ Algunas de estos hábitos puede que no te sirvan porque no aplican en la dinámi
 Por último te dejo una vista de como llevo mis metas en notion.
 
 <p align="center" width="100%">
-  <img src="/static/images/misc/habitos.png" width="400" />
+  <img src="https://i.imgur.com/fHoeCHA.png" width="400" />
 </p>
 
 ## Referencias

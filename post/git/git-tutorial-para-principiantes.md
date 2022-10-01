@@ -96,12 +96,12 @@ Situaciones:
    `git restore --stage <filename>`
 
 5. ¿Cuáles son los pasos para eliminar un archivo y actualizar el estado de la etapa de stage?
-
+   
    - Eliminar el archivo
    - `git add <filename>`
-
+   
    También puedes usar
-
+   
    - `git rm <filename>`
 
 6. ¿Cuál es el comando para recuperar un archivo que he eliminado ?

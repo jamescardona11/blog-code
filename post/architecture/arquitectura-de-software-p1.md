@@ -1,9 +1,6 @@
----
 title: "Arquitectura de software - P1"
 date: "2022-10-01"
-slug: "arquitectura-de-software"
-
----
+slug: "arquitectura-de-software-p1"
 
 # Arquitectura de software - P1
 
@@ -135,12 +132,34 @@ Tomar decisiones de arquitectura requiere un equilibrio y ese equilibrio nos lle
 
 **Problema 3:**
 
-Cuando encontramos información en internet nos dan una solución técnica que no involucra un contexto y podemos pensar que la arquitectura es una solución técnica cuando inicialmente es una solución del negocio.
+Cuando encontramos información en internet nos dan una solución técnica que no involucra un contexto y podemos pensar que la arquitectura es una solución solo técnica cuando involucrar la solución de un problema del negocio/empresa.
 
 @@@ Sera que cierro la primer parte y arranco acá segundo post
 
 @@@ para cerrar debo concluir y cerrar con algo poderoso
 
-#### Conceptos para básicos
+## ¿Como resolvemos estos problemas?
 
-#### Arquitectura por capas
+Para resumir los problemas, la falta de contexto y pensar que lo único que debemos hacer es código, basandonos en un tutorial corto y sin considerar lo que necesita mi negocio, que madurez tiene mi equipo y cual es el propósito del software. Hacen que simplemente empecemos a hacer código y entrar en problemas diferentes, digamos que podrás tener una "buena" arquitectura sin tus problemas anteriores pero tienes nuevos problemas, solo que ahora son problemas "mas sofisticados".
+
+Con esto no quiero decir que no debas abordar los problemas que surgen en un desarrollo de software aplicando técnicas de diseño de software, combinada de patrones de diseños y reglas para estructurar todo. De hecho es muy importante que lo hagas, lo que quiero decir y asegurar hasta acá es: **La arquitectura es muy importante**, pero no la hagas por hacerla, piensa y evalua primero que necesitas y **EVOLUCIONA** tu arquitectura en cada etapa.
+
+En lo que llevo desarrollando ha surgido una ola maravillosa que es el **agile**, pero a veces se nos olvida que el agile es un concepto 100% aplicable para las etapas de la evolución de una arquitectura.
+
+Al terminar esta serie de post, tendrás una idea más de como abordar el problema o no, puede que te sirva o no, puede que sea aplicable a tu contexto o no, puede que simplemente sea un post más. Pero parte de **resolver** el problema es consultar, leer, comentar, preguntar y tener la valentia de escuchar/leer nuevas ideas.
+
+Hasta el momento no hemos hablado nada de arquitectura, pero ya dejamos sentadas algunas bases de lo que queremos con este post. 
+
+Resolver estos problemas y entender como ser un arquitecto de software desde mi optica se debe hacer desde diferentes puntos de vista depende tu seniority.
+
+Si quieres conocer un poco más sobre seniority te invito a ver el siguiente post
+
+/// Referencia al post, solo para el post en español
+
+### Dividamos la solución:
+
+Cuando hablo de separar la solución, voy hacerlo por seniority, con esto no me refiero que un *junior* no pueda saber ya cosas de un *senior*, es más para que cada uno tenga una ruta en la que pueda avanzar sin sentirse frustrado. Adicional esta ruta la baso en mi experiencia y es más como yo creo que puede funcionarle a las personas.
+
+/// 
+
+Sobre que es una arquitectura **evolutiva** desde mi perspectiva vamos a hablar en la segunda parte de esta serie.

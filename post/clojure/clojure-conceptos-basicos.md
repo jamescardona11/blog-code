@@ -93,13 +93,13 @@ Es el lenguaje del paréntesis, no te preocupes, te adecuarás pronto con alguno
 Veamos un par de ejemplos de clojure.
 
 - función para decir cuantos años me falta para llegar a x-edad
-
+  
   ```clojure
   (defn age-to [age x-age] (- x-age age))
   ;; uso
   (age-to 20 40) ;;=> 20
   ```
-
+  
   - **defn** es como se definen las funciones, en este caso el nombre es **age-to**
   - [] entre paréntesis definimos una lista de argumentos que recibe la función
   - luego el body de la función, en este caso invocamos la resta
@@ -107,23 +107,26 @@ Veamos un par de ejemplos de clojure.
 &nbsp;
 
 - función para sumar los primeros x números
-
+  
   ```clojure
   (defn sum-to-x [x] (reduce + (take x (iterate inc 1))))
   ;; uso
   (sum-to-x 10) ;; => 55
   ```
-
+  
   - **Descifremos que hicimos acá**
-
   * En este caso sum-to-x, toma solo un argumento que es x
+  
   * Empecemos de adentro hacia afuera, **iterate** retorna una secuencia de números
+  
   * **take** toma los primeros x números de la secuencia
+  
   * **reduce** los suma y devolvemos el resultado
 
 &nbsp;
 
 - otra forma de escribir lo mismo
+  
   ```clojure
   (defn l-seq [] (iterate inc 1))
   (defn first-x [x] (take x (l-seq)))
@@ -131,6 +134,7 @@ Veamos un par de ejemplos de clojure.
   ;; uso
   (sum-to-x 10) ;; => 55
   ```
+  
   - La ventaja radica en que podemos probar la veracidad de cada parte de la solución.
 
 Creo que podemos hacer muchas cosas, pero por el momento es una breve introducción a clojure.

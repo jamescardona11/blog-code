@@ -11,7 +11,7 @@ La verdad no es algo muy complejo, existen muchas librerías que nos ayudan a so
 
 <p align="center" width="100%">
 
-  <img src="https://i.imgur.com/3EldbWc.gif" width="450" />
+<img src="https://i.imgur.com/3EldbWc.gif" width="450" />
 </p>
 
 ### Estrategia para hacer una app responsive
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
 
 <p align="center" width="100%">
 
-  <img src="https://i.imgur.com/TCpDBv3.png" width="250" />
+<img src="https://i.imgur.com/TCpDBv3.png" width="250" />
 </p>
 
 #### 4. LayoutBuilder
@@ -277,11 +277,10 @@ Hasta este punto no hemos mucho, pero veamos que pasa si movemos el tamaño de l
 ¿Qué creen que debemos considerar o hacer para solucionarlo?
 
 - Encontremos algunos puntos de control para la aplicación.
-
+  
   1. Breakpoint cuando el width 1360
-
+  
   2. Breakpoint cuando el width 1630
-
 * Usemos estos puntos de control iniciales para modificar algunos aspectos de nuestro dashboard.
 
 En el web layout.dart y coloquemos un **LayoutBuilder** y vamos a ocultar el _NavMenu_ y el _SideBar_ vamos a mostrar un botón con icon cuando se oculte el menu.
