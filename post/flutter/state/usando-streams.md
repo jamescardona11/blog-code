@@ -1,3 +1,9 @@
+---
+title: "Usando Streams"
+date: "2022-2-30"
+slug: "usando-streams"
+---
+
 # Usando Streams
 
 Inicialmente, te doy la bienvenida, espero puedas encontrar útil, entretenido y de valor este post. Quiero empezar explicando el propósito del post:
@@ -202,7 +208,6 @@ Donde crearemos un state-management y vamos a hacer ejemplos más complejos usan
 Si quieres profundizar más, te recomiendo mucho  [Blog de Vandad Nahavandipoor](https://vandad.sh/blog/)
 
 Código en github: [Code](https://github.com/jamescardona11/my-personal-blog/tree/main/code/usign_stream_flutter)
-
 
 Gracias por llegar hasta acá, Dale me gusta a mi artículo 🤞Suscríbete a mi boletín si estás interesado en artículos como estos.
 

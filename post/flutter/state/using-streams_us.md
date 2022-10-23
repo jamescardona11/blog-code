@@ -1,3 +1,9 @@
+---
+title: "Using Streams"
+date: "2022-2-30"
+slug: "using-streams"
+---
+
 # Using Streams
 
 I hope you find this post useful, entertaining, and valuable. The purpose of the post is to understand the basics related to Streams
@@ -15,7 +21,6 @@ The most **formal** definition would be: the stream represents a sequence of asy
 Flutter releases this functionality to:
 
 >  Widgets + Streams = Reactive Flutter App
-
 
 In reactive programming we have some important and basic concepts:
 
@@ -197,7 +202,6 @@ Where we will create a state-management and we will make more complex examples u
 If you want to go deeper, I highly recommend  [Blog de Vandad Nahavandipoor](https://vandad.sh/blog/)
 
 Github: [Code](https://github.com/jamescardona11/my-personal-blog/tree/main/code/usign_stream_flutter)
-
 
 Thanks for read. Like my article 🤞Subscribe to my newsletter if you are interested in articles like these.
 

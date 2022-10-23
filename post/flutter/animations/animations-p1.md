@@ -3,5 +3,3 @@
 // estrategia para hacer la animacion
 
 // 
-
-
