@@ -12,15 +12,11 @@ Nuevamente bienvenido, si has llegado hasta la segunda parte espero sea de tu ag
 
 En este post vamos a ver la explicación básica de algunas arquitecturas, como dije en el primer post, no pretendo resolver los detalles finos de cada arquitectura es dar una mirada general este post no te va hacer experto pero te puede ayudar a empezar.
 
-Abordaremos las soluciones de arquitectura; sus características, componentes y como hacerlas **evolutivas**.
-
 ## Arquitectura por capas
 
-Cuando desarrollamos un sistema, generalmente agrupamos y dividimos en pequeñas partes esas partes pueden tener algo en común que representa una responsabilidad del sistema. Ejemplo podemos tener una capa que sea la que controle todo el flujo de datos de la base de datos, de una API, etc.
+Cuando desarrollamos un sistema, generalmente agrupamos y dividimos en pequeñas partes esas partes pueden tener algo en común que representa una responsabilidad del sistema. Ejemplo podemos tener una capa que sea la que controle todo el flujo de datos de la base de datos, de una API, etc. El patrón arquitectonico de capas es el más usado(y abusado)
 
 > Entonces una capa es una unidad conceptual que agrupa una o varios componentes que tienen una responsabilidad similar.
-
-
 
 ##### Ventajas:
 
@@ -38,17 +34,11 @@ Cuando desarrollamos un sistema, generalmente agrupamos y dividimos en pequeñas
 
 - Cada capa **añade** un grado de complejidad
 
-
-
 La cantidad de capas de una arquitectura no hace que sea mejor. Si enfocamos la solución donde una capa solo conoce la capa inmediatamente "debajo" de ella, terminamos creando clases proxy para pasar por capas intermedias en lugar de usar directamente la capa que necesitamos.
 
 Llevamos a nuestro proyecto a un abstracción excesiva en afán de crear el sistema perfecto y las pequeñas actualizaciones repercutten en todas las áreas de la la aplicación.
 
-
-
 Mantener un balance es la mejor forma de iniciar con una arquitectura por capas, usando las capas que necesitamos para la etapa del proyecto, no busques el santo gríal arquitectónico. Debemos ajustarnos a la necesidad del proyecto y llevarlo a tener éxito.
-
-
 
 ### MVC y MV*
 
@@ -56,11 +46,7 @@ MVC o modelo-vista-controlador, es uno de los primeros enfoques  en hablar de "s
 
 Una de las razones es que podemos separar responsabilidades, aunque muchos desarrolladores no saben como *desacoplar* y terminan mezclando en algunas capas diferntes conceptos que terminan siendo un problema.
 
-
-
 > Acoplamiento: Que dos o más componentes dependan entre si
-
-
 
 Las capas presentes:
 
@@ -74,8 +60,6 @@ Las capas presentes:
   
   - Traduce una acción del usuario en business logic
 
-
-
 **Conceptos adicionales**
 
 - La vista puede usar los módelos directamente
@@ -83,8 +67,6 @@ Las capas presentes:
 - Cuando el modelo cambia, este dispara un evento inmediatamente para actualizar la vista
 
 - Puede haber multiples view por cada controlador
-
-
 
 **Problemas de este enfoque**
 
@@ -94,19 +76,13 @@ Las capas presentes:
 
 - Sin abstracción adicional un cambio en el modelo puede repercutir en multiples vistas
 
-
-
 MVC proporsiona un buen punto de partida a como se programaba hace 30 años pero si la complejidad del sistema crece necesitamos mayor desacoplamiento.
 
 Esta solución útil cuando el proyecto es pequeño y para presentar una prueba de concepto, agregando algunas reglas de dependencias y usando abstracción podemos considerarlo como un punto de partida.
 
-
-
 #### MV* = MVP & MVVM
 
 Cuando hablamos de MV* es las variaciones que se han realizado a MVC para hacer que escale mucho mejor para otros tipos de proyectos, en la última parte mencionabamos las reglas de dependencias, es lo que MVP y MVVM tienen y que hace que la separación de responsabilidades sea mucho más clara.
-
-
 
 ##### MVP
 
@@ -118,19 +94,7 @@ MVP o modelo-vista-presentador, nos trae dentro de sus cambios que la vista se v
 
 - Solo hay un presentador por vista
 
-
-
 @@@ complementar MVP y MVVM
-
-
-
-
-
-
-
-
-
-
 
 /// que es una arq evolutiva
 
