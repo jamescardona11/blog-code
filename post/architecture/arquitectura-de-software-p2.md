@@ -98,7 +98,7 @@ MVP o modelo-vista-presentador, nos trae dentro de sus cambios que la vista se v
 
 /// que es una arq evolutiva
 
-/// caracteristicas de una arq evolutiva
+/// características de una arq evolutiva
 
 /// Arquitectura por capas
 

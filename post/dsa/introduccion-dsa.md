@@ -3,7 +3,7 @@
 > DSA sería la contracción de Data Structure and Algorithms.
 
 El objetivo de este post es poder hacer una introducción a BigO, Array y HashTable para empezar a resolver problemas en plataformas como [LeetCode](leetcode.com). Si no quieres resolver problemas, este post te ayudará atender parte de las bases sobre estructuras de datos.
-*"Este post es largo así que ponte cómodo y empecemos con la acción"*
+*"Este post es grande, así que ponte cómodo y empecemos con la acción"*
 
 <p align="center" width="100%">
   <img src="https://media.giphy.com/media/4xWGyVKoXqg2eVCiq9/giphy.gif" width="200" alt="start" />
@@ -13,7 +13,7 @@ El objetivo de este post es poder hacer una introducción a BigO, Array y HashTa
 
 Como desarrolladores de software constantemente estamos buscando crear mejor código para nuestra empresa, para nuestros proyectos personales, tomamos cursos o capacitaciones para mejorar nuestras habilidades, pero **¿Qué es el buen código? ¿Qué código es mejor si tenemos dos soluciones?:** 
 
-Puede que esta sea una respuesta que abarque mucho conceptos pero voy a tratar de simplificar muchas cosas y vamos a intentar quedarnos con dos conceptos para poder desarrollar el objetivo de este post. ¿Qué significa mejor?
+Puede que esta sea una respuesta que abarque muchos conceptos, pero voy a tratar de simplificar muchas cosas y vamos a intentar quedarnos con dos conceptos para poder desarrollar el objetivo de este post. ¿Qué significa mejor?
 
 - Legible (Readable): ¿Es tu código limpio, otros lo pueden entender, es fácil de mantener?
 
@@ -25,11 +25,11 @@ Pensemos que el código es como cocinar, podemos decir que hay una buena forma d
   <img src="https://i.imgur.com/XvGjryA.png" width="400" alt="code-pie" />
 </p>
 
-Las computadoras son maquinas, para producir algo necesitan buenas recetas (buen código). En este caso sería lo mismo
+Las computadoras son máquinas, para producir algo necesitan buenas recetas (buen código). En este caso sería lo mismo
 
 Así cómo hay muchas formas de crear un pastel, cambiando los ingredientes, la preparación. Existen muchas formas de crear código.
 
-Para empezar a entender que es un buen código en el contexto de este post desarrollemos dos soluciones para para sumar los números del 1 al 100, ¿cómo podemos responder las anteriores preguntas sobre escalabilidad?
+Para empezar a entender que es un buen código en el contexto de este post desarrollemos dos soluciones para sumar los números del 1 al 100, ¿cómo podemos responder las anteriores preguntas sobre escalabilidad?
 
 ```js
 // sum number 1 to 100
@@ -92,7 +92,7 @@ Lo que podemos crear es una medida estándar para cualquier entorno y es ahí do
 
 ## BigO
 
-BigO es una forma de simplificar el conteo de operaciones, esto es lo común que podemos tener y que simplemente podemos medir la rapidez de un algoritmo midiendo la en relación a la cantidad de operaciones que debe realizar un código para ejecutarse.
+BigO es una forma de simplificar el conteo de operaciones, esto es lo común que podemos tener y que simplemente podemos medir la rapidez de un algoritmo midiéndola en relación con la cantidad de operaciones que debe realizar un código para ejecutarse.
 
 A medida que un código tenga más operaciones podemos decir que ese código es "peor". Entre más cerca del rojo estemos mucho peor.
 
@@ -104,7 +104,7 @@ A medida que un código tenga más operaciones podemos decir que ese código es 
 
 #### Consideraciones para calcular la notación BigO.
 
-- Siempre vamos a consider el pero caso
+- Siempre vamos a considerar el pero caso
 - Vamos a remover constantes
 - Diferentes entradas deben tener diferentes notaciones
   - Para loops seguidos O(a+b)
@@ -185,7 +185,7 @@ function randomFn2(n, m) {
 
 - Solución #2: O(n*m)
 
-¿Encontraste las respuestas?, sino revisa la parte de consideraciones para calcular BigO o deja un comentario para que puedas aclarar tus dudas.
+¿Encontraste las respuestas?, si no revisa la parte de consideraciones para calcular BigO o deja un comentario para que puedas aclarar tus dudas.
 
 ### BigO para calcular Space Complexity
 
@@ -195,7 +195,7 @@ BigO también podemos usarlo para calcular el espacio en memoria que ocupa nuest
 
 - Strings necesitan O(n) de espacio donde n es el tamaño del String
 
-- Objetos como Array, Maps o Sets ocuparan O(n) donde n sera el tamaño del array o la cantidad de keys de los mapas.
+- Objetos como Array, Maps o Sets ocuparan O(n) donde n será el tamaño del array o la cantidad de keys de los mapas.
 
 ```js
 function sum(arr) { // arr is array
@@ -243,7 +243,7 @@ Pensemos en las siguientes preguntas y como encaja nuestro aprendizaje hasta ac�
 
 Lo primero que se nos puede venir a la cabeza para responder las preguntas anteriores es, ¿cuál es la estructura de datos perfecta para todo?. Respuesta rápida no existe. Hay muchas de agrupar y organizar información, pero no todas las estructuras son buenas para todos los momentos o situaciones, así como en la vida real podríamos guardar ropa en el refrigerador, aunque parece que no es la forma adecuada.
 
-Así mismo pasa en los algoritmos y el código, escoger una buena estructura de datos nos va ayudar a resolver problemas más rápido, más fácil y haciendo mejor nuestro código. Tampoco pretendo que te vuelvas loco aprendiendo cada una de estas estructuras, algunas son muy especificas para problemas concretos. Puedes consultar sobre todas las estructuras de datos acá: [List of data structures - Wikipedia](https://en.wikipedia.org/wiki/List_of_data_structures)
+Así mismo pasa en los algoritmos y el código, escoger una buena estructura de datos nos va a ayudar a resolver problemas más rápido, más fácil y haciendo mejor nuestro código. Tampoco pretendo que te vuelvas loco aprendiendo cada una de estas estructuras, algunas son muy específicas para problemas concretos. Puedes consultar sobre todas las estructuras de datos acá: [List of data structures - Wikipedia](https://en.wikipedia.org/wiki/List_of_data_structures)
 
 En este post solo cubriremos dos Arrays y HashTable. En próximos post seguiremos con las más conocidas, usadas y útiles en el día a día.
 
@@ -274,10 +274,10 @@ Sobre los arrays podemos hacer diferentes operaciones, las más básicas son:
 #### Implementemos un array
 Hagamos la implementación de un Array desde cero. Incluyamos las siguientes operaciones:
 
-- obtener un elemento mediante el indice, **get**
+- obtener un elemento mediante el índice, **get**
 - agregar un elemento, **push**
 - borrar el último elemento, **pop**
-- borrar un elemento por el indice, **delete**
+- borrar un elemento por el índice, **delete**
 
 ```js
 class MyArray {
@@ -299,7 +299,7 @@ class MyArray {
 }
 ```
 
-Este objeto data particularmente lo revisaremos en un apartado más adelante, pero sino sabes que es algo que guarda los elementos usando una {clave, valor}.
+Este objeto data particularmente lo revisaremos en un apartado más adelante, pero si no sabes que es algo que guarda los elementos usando una {clave, valor}.
 
 Procedamos a crear el método **push**
 
@@ -315,7 +315,7 @@ class MyArray {
 }
 ```
 
-Básicamente se guardan los elementos "al final" usando el length y se aumenta el length. Esta operación es de complejidad constante O(1).
+Básicamente, se guardan los elementos "al final" usando el length y se aumenta el length. Esta operación es de complejidad constante O(1).
 
 Procedamos a crear el método **get**
 
@@ -331,8 +331,8 @@ class MyArray {
 }
 ```
 
-Este método **get** podríamos crear algunas validaciones por si tratamos de acceder a un elemento que no existe y ejecutar una error, pero para efectos prácticos sigamos adelante.
-Nuevamente esta operación es de complejidad constante O(1) porque al conocer la clave en este caso el index obtener el elemento al instante.
+Este método **get** podríamos crear algunas validaciones por si tratamos de acceder a un elemento que no existe y ejecutar un error, pero para efectos prácticos sigamos adelante.
+Nuevamente, esta operación es de complejidad constante O(1) porque al conocer la clave, en este caso el index obtener el elemento al instante.
 
 Procedamos a crear el método **pop**
 
@@ -356,8 +356,8 @@ class MyArray {
 ```
 
 En este método vamos a retornar vació si el array length es cero.
-Luego vamos a obtener el último elemento por el indice restando uno al length. Vamos a borrar el elemento de *data* y vamos a reducir el length en uno.
-Nuevamente esta operación sigue siendo de complejidad constante O(1).
+Luego vamos a obtener el último elemento por el índice restando uno al length. Vamos a borrar el elemento de *data* y vamos a reducir el length en uno.
+Nuevamente, esta operación sigue siendo de complejidad constante O(1).
 
 Procedamos a crear el método **delete**
 
@@ -389,8 +389,8 @@ class MyArray {
 }
 ```
 
-Este método sería el más complicado porque debemos mover los indices o modificar los indices para que todo quede como debe ser, no podemos tener un array un salto de indice.
-Para este método obtenemos el elemento a eliminar y procedemos por medio del método complementario a mover los indices. Borramos y reducimos el length en uno.
+Este método sería el más complicado porque debemos mover los índices o modificar los índices para que todo quede como debe ser, no podemos tener un array un salto de índice.
+Para este método obtenemos el elemento a eliminar y procedemos por medio del método complementario a mover los índices. Borramos y reducimos el length en uno.
 Este método **delete** tiene una complejidad lineal O(n)
 
 **Probemos que tal funciona nuestro array**
@@ -432,11 +432,11 @@ Después de entender la lógica detrás de un array y entender lo que es BigO te
 
 También conocidos como HashMaps, Maps, Unordered Maps, Dictionary hay muchas formas de llamar a esta estructura. La razón de iniciar con Array y HashTable es que son dos de las más comunes estructuras de datos en nuestro día a día como desarrollador. Tienen un uso muy frecuente en todos los lenguajes, para entender un poco sobre que es un hashTable descompongamos el nombre, ¿Qué significa Hash?.
 
-Para responder esto empecemos con lo más simple, HashTable se compone principalmente de dos características **Key** y **Value**, donde key sería el como el indice en los Arrays, asumamos que existe algo que se llama **Hash function**(pronto lo veremos) que convierte nuestra Key en algo "único" y que eso se guarda en memoria así que sabemos en todo momento en que espacio de memoria esta guardado determinado valor, de esta forma una HashTable puede fácilmente encontrar el correspondiente valor gracias a su Key.
+Para responder esto empecemos con lo más simple, HashTable se compone principalmente de dos características **Key** y **Value**, donde key sería el como el índice en los Arrays, asumamos que existe algo que se llama **Hash function**(pronto lo veremos) que convierte nuestra Key en algo "único" y que eso se guarda en memoria así que sabemos en todo momento en que espacio de memoria está guardado determinado valor, de esta forma una HashTable puede fácilmente encontrar el correspondiente valor gracias a su Key.
 
 #### ¿Qué es un hash function?
 
-Simplemente es algo que genera un "nuevo" valor con un length especifico a partir de un valor inicial.
+Simplemente, es algo que genera un "nuevo" valor con un length especifico a partir de un valor inicial.
 Si vamos a un sitio como [MD5HashGenerator](https://www.md5hashgenerator.com) podemos ver que al darle un valor de entrada nos genera algo similar a lo que se ve en la siguiente imagen, usando un algoritmo de generación, el truco acá es que para el mismo valor de entrada debemos tener el mismo valor de salida si estamos usando el mismo algoritmo de hashing.
 
 <p align="center" width="100%">
@@ -444,7 +444,7 @@ Si vamos a un sitio como [MD5HashGenerator](https://www.md5hashgenerator.com) po
 </p>
 * Existen muchos tipos de algoritmos para generar ese hash.
 
-Una aclaración importante es que los lenguajes usan una función de Hash optima que demora poco tiempo y que esta "muy ligada" a un espacio de memoria.
+Una aclaración importante es que los lenguajes usan una función de Hash óptima que demora poco tiempo y que está "muy ligada" a un espacio de memoria.
 
 Las operaciones más comunes de un HashTable son:
 - insert O(1)
@@ -463,22 +463,22 @@ blog.domain = 'blog.jamescardona11.com', // insert - O(1)
 ```
 
 Después de ver que un HashTable todas las operaciones son O(1) deberíamos reconsiderar llamarla la *estructura perfecta*.
-Como se menciono al principio tenemos ventajas y desventajas en las HashTable y una de esas se llama Hash Collisions.
+Como se mencionó al principio tenemos ventajas y desventajas en las HashTable y una de esas se llama Hash Collisions.
 
 #### Hash collisions
 
-Esto es un tema importante que lo entendamos pero realmente es muy largo que probablemente llevaría un post completo para abordar todo y sus posibles soluciones.
+Esto es un tema importante que lo entendamos, pero realmente es muy largo que probablemente llevaría un post completo para abordar todo y sus posibles soluciones.
 Para entender un poco la situación dejo el siguiente video/gif para que se ilustre una problemática.
 
 <p align="center" width="100%">
   <img src="https://i.imgur.com/a8mJbFm.gif" width="500"  alt="Hash Collisions"/>
 </p>
 
-Pueden encontrar la pagina de referencia en este [link](https://www.cs.usfca.edu/~galles/visualization/OpenHash.html)
+Pueden encontrar la página de referencia en este [link](https://www.cs.usfca.edu/~galles/visualization/OpenHash.html)
 En este ejemplo tenemos un espacio limitado de doce espacios, nuestros computadores tienen espacio limitado.
-Podemos observar que como tenemos un espacio limitado para dos claves totalmente diferentes el espacio de memoria es el "mismo", y esto es lo que se conoce como Hash Collisions.
+Podemos observar que como tenemos un espacio limitado para dos claves totalmente diferentes, el espacio de memoria es el "mismo", y esto es lo que se conoce como Hash Collisions.
 
-Veamos en la siguiente imagen, supongamos que los indices 0...6 son espacios de memoria disponibles, cuando la HashFunction genera el valor y debe asignar en memoria puede generar colisiones, y una de las formas de resolverlo es generar punteros al siguiente valor guardado en ese espacio lo cual es llamado **LinkedList** que es otra estructura de datos que veremos en próximos post.
+Veamos en la siguiente imagen, supongamos que los índices 0...6 son espacios de memoria disponibles, cuando la HashFunction genera el valor y debe asignar en memoria puede generar colisiones, y una de las formas de resolverlo es generar punteros al siguiente valor guardado en ese espacio lo cual es llamado **LinkedList** que es otra estructura de datos que veremos en próximos post.
 
 <p align="center" width="100%">
   <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2015/07/hashChaining1.png" width="500"  alt="Hash Collisions 1"/>
@@ -486,7 +486,7 @@ Veamos en la siguiente imagen, supongamos que los indices 0...6 son espacios de 
 
 Pueden indagar mucho más en este post de [GeekForGeeks](https://www.geeksforgeeks.org/separate-chaining-collision-handling-technique-in-hashing/) 
 
-La conclusión importante sobre esto es que cuando tenemos colisiones, la lectura y escritura en una HashTable cambian a O(n/k) donde k es el tamaño de la HashTable; otra vez como BigO nos dice que eliminemos las constantes quedaría así: O(n).
+La conclusión importante sobre esto es que cuando tenemos colisiones, la lectura y escritura en una HashTable cambian a O(n/k) donde k es el tamaño de la HashTable; otra vez, como BigO nos dice que eliminemos las constantes, quedaría así: O(n).
 
 Resolver colisiones se puede hacer de diferentes formas como la que explicamos recientemente, si quieres saber más al respecto puedes consultar acá para iniciar. [Link](https://en.wikipedia.org/wiki/Hash_table#Collision_resolution)
 
@@ -574,7 +574,7 @@ class MyHashTable {
   }
 }
 ```
-Simplemente vamos a comprobar si existe la key en el array y luego vamos a recorrer el array buscando la key especifica.
+Simplemente, vamos a comprobar si existe la key en el array y luego vamos a recorrer el array buscando la key específica.
 
 **Probemos que tal funciona nuestro hashTable**
 
