@@ -2,7 +2,14 @@
 
 > DSA sería la contracción de Data Structure and Algorithms.
 
-El objetivo de este post es poder hacer una introducción a BigO, Array y HashTable para empezar a resolver problemas en plataformas como [Leetcode](leetcode.com). Si no quieres resolver problemas, este post te ayudará atender parte de las báses sobre estructuras de datos.
+El objetivo de este post es poder hacer una introducción a BigO, Array y HashTable para empezar a resolver problemas en plataformas como [LeetCode](leetcode.com). Si no quieres resolver problemas, este post te ayudará atender parte de las bases sobre estructuras de datos.
+*"Este post es largo así que ponte cómodo y empecemos con la acción"*
+
+<p align="center" width="100%">
+  <img src="https://media.giphy.com/media/4xWGyVKoXqg2eVCiq9/giphy.gif" width="200" alt="start" />
+</p>
+
+
 
 Como desarrolladores de software constantemente estamos buscando crear mejor código para nuestra empresa, para nuestros proyectos personales, tomamos cursos o capacitaciones para mejorar nuestras habilidades, pero **¿Qué es el buen código? ¿Qué código es mejor si tenemos dos soluciones?:** 
 
@@ -85,7 +92,7 @@ Lo que podemos crear es una medida estándar para cualquier entorno y es ahí do
 
 ## BigO
 
-BigO es una forma de simplificar el conteo de operaciones, esto es lo común que podemos tener y que simplemente podemos medir la rrapidez de un algoritmo midiendo la en relación a la cantidad de operaciones que debe realizar un código para ejecutarse.
+BigO es una forma de simplificar el conteo de operaciones, esto es lo común que podemos tener y que simplemente podemos medir la rapidez de un algoritmo midiendo la en relación a la cantidad de operaciones que debe realizar un código para ejecutarse.
 
 A medida que un código tenga más operaciones podemos decir que ese código es "peor". Entre más cerca del rojo estemos mucho peor.
 
@@ -99,7 +106,7 @@ A medida que un código tenga más operaciones podemos decir que ese código es 
 
 - Siempre vamos a consider el pero caso
 - Vamos a remover constantes
-- Diferentes entradas deben tener diferentes letiables
+- Diferentes entradas deben tener diferentes notaciones
   - Para loops seguidos O(a+b)
   - Para loops anidados O(a*b)
 
@@ -178,15 +185,15 @@ function randomFn2(n, m) {
 
 - Solución #2: O(n*m)
 
-¿Encontraste las respuestas?, sino revisa la parte de consideraciones para calcular BigO o dejame un comentario para que puedas aclarar tus dudas.
+¿Encontraste las respuestas?, sino revisa la parte de consideraciones para calcular BigO o deja un comentario para que puedas aclarar tus dudas.
 
 ### BigO para calcular Space Complexity
 
 BigO también podemos usarlo para calcular el espacio en memoria que ocupa nuestro algoritmo en tiempo de ejecución. Es similar solo que esta vez vamos a seguir las siguientes reglas:
 
-- Valores primitvos (numbers, bool, null) ocupan espacio constante.
+- Valores primitivos (numbers, bool, null) ocupan espacio constante.
 
-- Strings requiren O(n) de espacio donde n es el tamaño del String
+- Strings necesitan O(n) de espacio donde n es el tamaño del String
 
 - Objetos como Array, Maps o Sets ocuparan O(n) donde n sera el tamaño del array o la cantidad de keys de los mapas.
 
@@ -214,7 +221,7 @@ function double(arr) { // arr is array
 // O(n) space
 ```
 
-Después de haber visto esto deberiamos tener una mejor compresión de como podemos medir potencialmente que tan bueno es nuesto codigo comparado con otro.
+Después de haber visto esto debemos tener una mejor compresión de como podemos medir potencialmente que tan bueno es nuestro código comparado con otro.
 
 ---
 
@@ -223,7 +230,7 @@ Después de haber visto esto deberiamos tener una mejor compresión de como pode
 Simplemente piensa en esto como una forma de agrupar y organizar información. Donde la información tiene algo en común.
 
 <p align="center" width="100%">
-  <img src="https://i.imgur.com/B3hfybN.png" width="200"  alt="BigO notation"/>
+  <img src="https://i.imgur.com/B3hfybN.png" width="300"  alt="Different data structure"/>
 </p>
 
 Pensemos en las siguientes preguntas y como encaja nuestro aprendizaje hasta acá,
@@ -234,47 +241,42 @@ Pensemos en las siguientes preguntas y como encaja nuestro aprendizaje hasta ac�
 
 - ¿Cómo son diferentes?
 
-Lo primero que se nos puede venir a la cabeza para responder las preguntas anteriores es, ¿cuál es la estructura de datos perfecta para todo?. Respuesta rápida no existe. Hay muchas de agrupar y organizar información, pero no todas las estructuras son buenas para todos los momentos o situaciones, así como en la vida real podriamos guardar ropa en el refrigerador, aunque parece que no es la forma adecuada.
+Lo primero que se nos puede venir a la cabeza para responder las preguntas anteriores es, ¿cuál es la estructura de datos perfecta para todo?. Respuesta rápida no existe. Hay muchas de agrupar y organizar información, pero no todas las estructuras son buenas para todos los momentos o situaciones, así como en la vida real podríamos guardar ropa en el refrigerador, aunque parece que no es la forma adecuada.
 
 Así mismo pasa en los algoritmos y el código, escoger una buena estructura de datos nos va ayudar a resolver problemas más rápido, más fácil y haciendo mejor nuestro código. Tampoco pretendo que te vuelvas loco aprendiendo cada una de estas estructuras, algunas son muy especificas para problemas concretos. Puedes consultar sobre todas las estructuras de datos acá: [List of data structures - Wikipedia](https://en.wikipedia.org/wiki/List_of_data_structures)
 
 En este post solo cubriremos dos Arrays y HashTable. En próximos post seguiremos con las más conocidas, usadas y útiles en el día a día.
 
-Antes de seguir explorarando las data structure, al menos en el contexto de este post que entiendas que es una **clase/class** de programación orientada objetos(OOP), no voy a entrar en detalles sobre que es una clase en este post, quedate con esta definición. *Es algo que tiene los planos para crear "cosas(objetos)" que tienen atributos y comportamientos*, aunque te invito a consultar más sobre OOP por tu cuenta.
+Antes de seguir explorando las data structure, al menos en el contexto de este post que entiendas que es una **clase/class** de programación orientada objetos(OOP), no voy a entrar en detalles sobre que es una clase en este post, quédate con esta definición. *Es algo que tiene los planos para crear "cosas(objetos)" que tienen atributos y comportamientos*, aunque te invito a consultar más sobre OOP por tu cuenta.
 
 La razón de aprender sobre *OOP* y *class* es porque vamos a implementar algunas estructuras desde cero y en muchos casos usaremos clases para poder desarrollar el comportamiento.
 
 ### Arrays
 
-Esta colección es una de las más usadas o conocidas, y su principal caracteristica es que organizan los elementos de forma secuencial uno despues del otro.
+Esta colección es una de las más usadas o conocidas, y su principal característica es que organizan los elementos de forma secuencial uno después del otro.
 
 ```js
 let arr = [1, 2, 3, 4, 5, 6]; // nums
 let arr2 = ['b', 'l', 'o', 'g']; // chars
 ```
 
-Los array tambien podemos separarlos en dos tipos estáticos y dinámicos, basicamente los que tienen un tamaño constante de elementos y los que pueden crecer en el tiempo.
+Los array también podemos separarlos en dos tipos estáticos y dinámicos, básicamente los que tienen un tamaño constante de elementos y los que pueden crecer en el tiempo.
 
-Sobre los arrays podemos hacer diferentes operaciones, las más basicas son:
+Sobre los arrays podemos hacer diferentes operaciones, las más básicas son:
 
 - lookup - O(1)
-
 - push* - O(1) - Agregar un elemento al final del array
-
 - insert - O(n)
-
 - delete - O(n)
 
-*Puede ser O(n) si el array es dinamico, en los array dinámicos la operación se conoce como append.
+*Puede ser O(n) si el array es dinámico, en los array dinámicos la operación se conoce como append.
 
-Creeemos la implementación de un Array desde cero. Incluyamos las siguientes operaciones:
+#### Implementemos un array
+Hagamos la implementación de un Array desde cero. Incluyamos las siguientes operaciones:
 
-- obtener por el indice, **get**
-
+- obtener un elemento mediante el indice, **get**
 - agregar un elemento, **push**
-
 - borrar el último elemento, **pop**
-
 - borrar un elemento por el indice, **delete**
 
 ```js
@@ -408,7 +410,7 @@ console.log(arr); // MyArray { length: 2, data: { '0': 'hello', '1': 'there' } }
 
 Pueden obtener el código completo en el [github]()
 
-#### Ejercicios recomendados para iniciar en LeetCode
+#### Ejercicios de LeetCode Arrays
 
 Después de entender la lógica detrás de un array y entender lo que es BigO te voy a dejar algunos ejercicios propuestos para que puedas empezar a desarrollar mucho más tu habilidad de resolución y te vuelvas un maestro de las estructuras de datos:
 
@@ -420,4 +422,191 @@ Después de entender la lógica detrás de un array y entender lo que es BigO te
 - [Valid Palindrome](https://leetcode.com/submissions/detail/848305630/) - Easy
 - [Contains Duplicate](https://www.leetcode.com/problems/contains-duplicate) - Easy
 
+
+<p align="center" width="100%">
+  <img src="https://media.giphy.com/media/Caey86HvbOPuPwHrsx/giphy.gif" width="300"  alt="hash generator"/>
+</p>
+
+
 ### HashTable
+
+También conocidos como HashMaps, Maps, Unordered Maps, Dictionary hay muchas formas de llamar a esta estructura. La razón de iniciar con Array y HashTable es que son dos de las más comunes estructuras de datos en nuestro día a día como desarrollador. Tienen un uso muy frecuente en todos los lenguajes, para entender un poco sobre que es un hashTable descompongamos el nombre, ¿Qué significa Hash?.
+
+Para responder esto empecemos con lo más simple, HashTable se compone principalmente de dos características **Key** y **Value**, donde key sería el como el indice en los Arrays, asumamos que existe algo que se llama **Hash function**(pronto lo veremos) que convierte nuestra Key en algo "único" y que eso se guarda en memoria así que sabemos en todo momento en que espacio de memoria esta guardado determinado valor, de esta forma una HashTable puede fácilmente encontrar el correspondiente valor gracias a su Key.
+
+#### ¿Qué es un hash function?
+
+Simplemente es algo que genera un "nuevo" valor con un length especifico a partir de un valor inicial.
+Si vamos a un sitio como [MD5HashGenerator](https://www.md5hashgenerator.com) podemos ver que al darle un valor de entrada nos genera algo similar a lo que se ve en la siguiente imagen, usando un algoritmo de generación, el truco acá es que para el mismo valor de entrada debemos tener el mismo valor de salida si estamos usando el mismo algoritmo de hashing.
+
+<p align="center" width="100%">
+  <img src="https://i.imgur.com/kROJLzP.png" width="500"  alt="hash generator"/>
+</p>
+* Existen muchos tipos de algoritmos para generar ese hash.
+
+Una aclaración importante es que los lenguajes usan una función de Hash optima que demora poco tiempo y que esta "muy ligada" a un espacio de memoria.
+
+Las operaciones más comunes de un HashTable son:
+- insert O(1)
+- lookup O(1)
+- delete O(1)
+
+```js
+let blog = {
+  name: 'jamescardona11',
+  owner: 'james',
+  blogHasPowers: false,
+}
+
+blog.name // lookup - O(1)
+blog.domain = 'blog.jamescardona11.com', // insert - O(1)
+```
+
+Después de ver que un HashTable todas las operaciones son O(1) deberíamos reconsiderar llamarla la *estructura perfecta*.
+Como se menciono al principio tenemos ventajas y desventajas en las HashTable y una de esas se llama Hash Collisions.
+
+#### Hash collisions
+
+Esto es un tema importante que lo entendamos pero realmente es muy largo que probablemente llevaría un post completo para abordar todo y sus posibles soluciones.
+Para entender un poco la situación dejo el siguiente video/gif para que se ilustre una problemática.
+
+<p align="center" width="100%">
+  <img src="https://i.imgur.com/a8mJbFm.gif" width="500"  alt="Hash Collisions"/>
+</p>
+
+Pueden encontrar la pagina de referencia en este [link](https://www.cs.usfca.edu/~galles/visualization/OpenHash.html)
+En este ejemplo tenemos un espacio limitado de doce espacios, nuestros computadores tienen espacio limitado.
+Podemos observar que como tenemos un espacio limitado para dos claves totalmente diferentes el espacio de memoria es el "mismo", y esto es lo que se conoce como Hash Collisions.
+
+Veamos en la siguiente imagen, supongamos que los indices 0...6 son espacios de memoria disponibles, cuando la HashFunction genera el valor y debe asignar en memoria puede generar colisiones, y una de las formas de resolverlo es generar punteros al siguiente valor guardado en ese espacio lo cual es llamado **LinkedList** que es otra estructura de datos que veremos en próximos post.
+
+<p align="center" width="100%">
+  <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2015/07/hashChaining1.png" width="500"  alt="Hash Collisions 1"/>
+</p>
+
+Pueden indagar mucho más en este post de [GeekForGeeks](https://www.geeksforgeeks.org/separate-chaining-collision-handling-technique-in-hashing/) 
+
+La conclusión importante sobre esto es que cuando tenemos colisiones, la lectura y escritura en una HashTable cambian a O(n/k) donde k es el tamaño de la HashTable; otra vez como BigO nos dice que eliminemos las constantes quedaría así: O(n).
+
+Resolver colisiones se puede hacer de diferentes formas como la que explicamos recientemente, si quieres saber más al respecto puedes consultar acá para iniciar. [Link](https://en.wikipedia.org/wiki/Hash_table#Collision_resolution)
+
+Como quedan las operaciones en las HashTable
+- insert O(1) *
+- lookup O(1) * 
+- delete O(1)
+
+*Depende de la implementación y ocasionalmente pueden ser O(n).
+
+#### Implementemos un HashTable
+Hagamos la implementación de un Array desde cero. Incluyamos las siguientes operaciones:
+
+- obtener un elemento mediante la key, **get**
+- agregar un elemento, **set**
+
+
+Empecemos, para esto la plantilla sería donde el constructor recibe el tamaño de nuestra HashTable y donde tenemos una HashFunction definida.
+```js
+class MyHashTable {
+  constructor(size) {
+    this.data = new Array(size);
+  }
+
+  // hash function
+  _hash(key) {
+    let hash = 0;
+    for (let i = 0; i < key.length; i++) {
+      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+    }
+    return hash;
+  }
+
+  set(key, value) {}
+  get(key) {}
+}
+```
+
+Procedamos a crear el método **set**
+
+```js
+class MyHashTable {
+  constructor(size) {...}
+
+  // hash function
+  _hash(key) {...}
+
+  set(key, value) {
+    if (key == null) return;
+
+    const address = this._hash(key);
+    if (!this.data[address]) {
+      this.data[address] = [];
+    }
+
+    this.data.push([key, value]);
+  }
+}
+```
+Vamos a implementar algo que nos ayude con las colisiones, por eso en cada posición vamos a guardar un array con dos posiciones key y value. Si hay una colisión guardaremos haremos un push en ese array de las nuevas key y value conservando los valores anteriores.
+
+Procedamos a crear el método **get**
+
+```js
+class MyHashTable {
+  constructor(size) {...}
+
+  // hash function
+  _hash(key) {...}
+
+  set(key, value) {...}
+
+  get(key) {
+    const address = this._hash(key);
+    const cb = this.data[address];
+
+    if (cb) {
+      for (let i = 0; i < cb.length; i++) {
+        if (cb[i][0] === key) {
+          return cb[i][1];
+        }
+      }
+    }
+    return undefined;
+  }
+}
+```
+Simplemente vamos a comprobar si existe la key en el array y luego vamos a recorrer el array buscando la key especifica.
+
+**Probemos que tal funciona nuestro hashTable**
+
+```js
+const myHashTable = new MyHashTable(10);
+myHashTable.set('cherry', 900);
+myHashTable.set('grapes', 10000);
+myHashTable.set('grapes', 10000);
+myHashTable.set('apples', 9);
+
+for (let i = 0; i < myHashTable.data.length; i++) {
+  console.log(myHashTable.data[i]);
+}
+```
+
+#### Ejercicios LeetCode de HashTables & Arrays
+
+Después de entender la lógica detrás de un array y entender lo que es BigO te voy a dejar algunos ejercicios propuestos para que puedas empezar a desarrollar mucho más tu habilidad de resolución y te vuelvas un maestro de las estructuras de datos:
+
+- [Two Sum](https://leetcode.com/problems/two-sum/) - Easy
+- [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) - Easy
+- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - Easy
+- [Majority Element](https://leetcode.com/problems/majority-element/) - Easy/Medium
+- [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) - Easy/Medium
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+Gracias por llegar hasta acá considera dar un like, compartir y nos vemos en un próximo artículo.
+
+<p align="center" width="100%">
+  <img src="https://i.imgur.com/q7fqQHS.gif" width="300" alt="gif_chiaoo" />
+</p>
