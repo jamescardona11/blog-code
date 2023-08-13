@@ -408,7 +408,7 @@ arr.pop();
 console.log(arr); // MyArray { length: 2, data: { '0': 'hello', '1': 'there' } }
 ```
 
-Pueden obtener el código completo en el [github]()
+Pueden obtener el código completo en el [github](https://github.com/jamescardona11/my-personal-blog/tree/main/code/dsa)
 
 #### Ejercicios de LeetCode Arrays
 
@@ -599,6 +599,11 @@ Después de entender la lógica detrás de un array y entender lo que es BigO te
 - [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - Easy
 - [Majority Element](https://leetcode.com/problems/majority-element/) - Easy/Medium
 - [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) - Easy/Medium
+
+## Referencias y Agradecimientos:
+- Photo de portada por Mark Fletcher-Brown
+- https://zerotomastery.io
+- https://www.youtube.com/c/ColtSteeleCode
 
 
 &nbsp;

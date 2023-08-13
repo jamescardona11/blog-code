@@ -1,7 +1,7 @@
 ---
-title: "Arquitectura de software - P1"
-date: "2022-11-01"
-slug: "arquitectura-de-software-p1"
+title: Arquitectura de software - P1
+date: 2023-05-29
+slug: arquitectura-de-software-p1
 ---
 
 # Arquitectura de software - P1
